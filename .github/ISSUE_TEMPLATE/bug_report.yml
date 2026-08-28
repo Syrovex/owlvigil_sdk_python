@@ -1,0 +1,25 @@
+name: Bug report
+description: Report a reproducible SDK defect
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: textarea
+    attributes:
+      label: Description
+      description: What happened, and what did you expect?
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: SDK and runtime versions
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Minimal reproduction
+      description: Remove all credentials and sensitive data.
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: Request ID
