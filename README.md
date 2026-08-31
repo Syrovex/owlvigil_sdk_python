@@ -6,7 +6,7 @@ preview with a focused Management API surface.
 
 ## Installation
 
-After version 0.1.0 is published:
+After version 0.2.0 is published:
 
 ```bash
 pip install owlvigil

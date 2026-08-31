@@ -6,7 +6,7 @@
    version, README, and `CHANGELOG.md` in one reviewed pull request.
 3. Run the full test matrix, build sdist and wheel, and run `twine check`.
 4. Merge the release commit and create the matching signed tag, such as
-   `v0.1.0`. The Release workflow publishes through PyPI OIDC.
+   `v0.2.0`. The Release workflow publishes through PyPI OIDC.
 5. Verify installation from PyPI and complete the GitHub release notes.
 
 Do not create or store a long-lived PyPI token when trusted publishing is
