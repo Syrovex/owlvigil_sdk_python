@@ -1,18 +1,16 @@
 # OwlVigil Python SDK
 
 Sync and native async Python 3.9+ clients for the OwlVigil AI Gateway,
-Management API, streaming, and webhook verification. Version 0.1.x is a
-preview with a focused Management API surface.
+Management API, streaming, and webhook verification.
 
 ## Installation
-
-After version 0.2.0 is published:
 
 ```bash
 pip install owlvigil
 ```
 
-Until then, install a trusted source checkout with `pip install .`.
+Until the package is published on PyPI, install a trusted source checkout
+with `pip install .`.
 
 ## Quick start
 
@@ -52,6 +50,12 @@ pytest
 python -m build
 ```
 
-Live tests are opt-in and read-only. See the [API overview](docs/API.md), [CONTRIBUTING.md](CONTRIBUTING.md),
-[SECURITY.md](SECURITY.md), [SUPPORT.md](SUPPORT.md), and
-[CHANGELOG.md](CHANGELOG.md). Licensed under the [MIT License](LICENSE).
+Live tests are opt-in and read-only.
+
+## Documentation
+
+- Developer guides: [English](docs/DEVELOPER_GUIDE.en-US.md) · [简体中文](docs/DEVELOPER_GUIDE.zh-CN.md)
+- [CONTRIBUTING.md](CONTRIBUTING.md), [SECURITY.md](SECURITY.md),
+  [SUPPORT.md](SUPPORT.md), and [CHANGELOG.md](CHANGELOG.md)
+
+Licensed under the [MIT License](LICENSE).
