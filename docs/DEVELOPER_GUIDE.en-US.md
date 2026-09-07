@@ -306,6 +306,8 @@ retries.
 Verify the raw HTTP request bytes before JSON parsing or reserialization:
 
 ```python
+import os
+
 from owlvigil import verify_webhook
 
 raw_body: bytes = request_body_bytes

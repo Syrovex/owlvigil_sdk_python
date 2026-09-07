@@ -41,11 +41,9 @@ def test_verify_rejects_blank_secret(secret):
 
 @pytest.mark.parametrize(
     "header",
-    ["v1=deadbeef", "t=1700000000", "t=not-a-number,v1=deadbeef", ""],
+    ["v1=deadbeef", "t=1700000000", "t=not-a-number,v1=deadbeef"],
 )
 def test_verify_rejects_malformed_signature_header(header):
-    if header == "":
-        pytest.skip("covered by missing-header test")
     with pytest.raises(OwlVigilError, match="[Ii]nvalid webhook signature"):
         verify_webhook(PAYLOAD, header, SECRET, now=TIMESTAMP)
 

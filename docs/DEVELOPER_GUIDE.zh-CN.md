@@ -287,6 +287,8 @@ SDK 默认只对 GET、HEAD、OPTIONS 以及带幂等键的请求进行自动重
 验签必须使用 HTTP 请求体的原始字节，不要先 JSON decode 再重新序列化：
 
 ```python
+import os
+
 from owlvigil import verify_webhook
 
 raw_body: bytes = request_body_bytes
