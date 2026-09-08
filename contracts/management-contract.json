@@ -1,0 +1,582 @@
+{
+  "source": "OwlVigil OpenAPI Management contract",
+  "schemaCount": 167,
+  "operations": {
+    "get_billing_auto-charge": {
+      "method": "GET",
+      "path": "/billing/auto-charge"
+    },
+    "put_billing_auto-charge": {
+      "method": "PUT",
+      "path": "/billing/auto-charge"
+    },
+    "post_billing_auto-charge_retry": {
+      "method": "POST",
+      "path": "/billing/auto-charge/retry"
+    },
+    "get_billing_balance": {
+      "method": "GET",
+      "path": "/billing/balance"
+    },
+    "get_billing_invoices": {
+      "method": "GET",
+      "path": "/billing/invoices"
+    },
+    "get_billing_invoices_invoice_id": {
+      "method": "GET",
+      "path": "/billing/invoices/{invoice_id}"
+    },
+    "get_billing_orders": {
+      "method": "GET",
+      "path": "/billing/orders"
+    },
+    "get_billing_orders_order_id": {
+      "method": "GET",
+      "path": "/billing/orders/{order_id}"
+    },
+    "post_billing_orders_order_id_confirm-stripe-session": {
+      "method": "POST",
+      "path": "/billing/orders/{order_id}/confirm-stripe-session"
+    },
+    "get_billing_overview": {
+      "method": "GET",
+      "path": "/billing/overview"
+    },
+    "get_billing_payment-methods": {
+      "method": "GET",
+      "path": "/billing/payment-methods"
+    },
+    "post_billing_payment-methods": {
+      "method": "POST",
+      "path": "/billing/payment-methods"
+    },
+    "post_billing_payment-methods_setup-intent": {
+      "method": "POST",
+      "path": "/billing/payment-methods/setup-intent"
+    },
+    "delete_billing_payment-methods_payment_method_id": {
+      "method": "DELETE",
+      "path": "/billing/payment-methods/{payment_method_id}"
+    },
+    "put_billing_payment-methods_payment_method_id_default": {
+      "method": "PUT",
+      "path": "/billing/payment-methods/{payment_method_id}/default"
+    },
+    "get_billing_plans": {
+      "method": "GET",
+      "path": "/billing/plans"
+    },
+    "get_billing_plans_plan_id": {
+      "method": "GET",
+      "path": "/billing/plans/{plan_id}"
+    },
+    "get_billing_subscription": {
+      "method": "GET",
+      "path": "/billing/subscription"
+    },
+    "post_billing_subscription_cancel": {
+      "method": "POST",
+      "path": "/billing/subscription/cancel"
+    },
+    "post_billing_subscription_checkout": {
+      "method": "POST",
+      "path": "/billing/subscription/checkout"
+    },
+    "post_billing_subscription_checkout-sessions_sync-latest": {
+      "method": "POST",
+      "path": "/billing/subscription/checkout-sessions/sync-latest"
+    },
+    "get_billing_subscription_checkout-sessions_session_id": {
+      "method": "GET",
+      "path": "/billing/subscription/checkout-sessions/{session_id}"
+    },
+    "post_billing_subscription_downgrade": {
+      "method": "POST",
+      "path": "/billing/subscription/downgrade"
+    },
+    "post_billing_subscription_in-app": {
+      "method": "POST",
+      "path": "/billing/subscription/in-app"
+    },
+    "post_billing_subscription_in-app_confirm": {
+      "method": "POST",
+      "path": "/billing/subscription/in-app/confirm"
+    },
+    "post_billing_subscription_reactivate": {
+      "method": "POST",
+      "path": "/billing/subscription/reactivate"
+    },
+    "post_billing_subscription_upgrade": {
+      "method": "POST",
+      "path": "/billing/subscription/upgrade"
+    },
+    "get_billing_topup-plans": {
+      "method": "GET",
+      "path": "/billing/topup-plans"
+    },
+    "get_billing_topups": {
+      "method": "GET",
+      "path": "/billing/topups"
+    },
+    "post_billing_topups_checkout": {
+      "method": "POST",
+      "path": "/billing/topups/checkout"
+    },
+    "post_billing_topups_in-app": {
+      "method": "POST",
+      "path": "/billing/topups/in-app"
+    },
+    "post_billing_topups_in-app_confirm": {
+      "method": "POST",
+      "path": "/billing/topups/in-app/confirm"
+    },
+    "get_billing_topups_topup_id": {
+      "method": "GET",
+      "path": "/billing/topups/{topup_id}"
+    },
+    "get_gateway_keys": {
+      "method": "GET",
+      "path": "/gateway/keys"
+    },
+    "post_gateway_keys": {
+      "method": "POST",
+      "path": "/gateway/keys"
+    },
+    "delete_gateway_keys_key_id": {
+      "method": "DELETE",
+      "path": "/gateway/keys/{key_id}"
+    },
+    "get_gateway_keys_key_id": {
+      "method": "GET",
+      "path": "/gateway/keys/{key_id}"
+    },
+    "patch_gateway_keys_key_id": {
+      "method": "PATCH",
+      "path": "/gateway/keys/{key_id}"
+    },
+    "post_gateway_keys_key_id_disable": {
+      "method": "POST",
+      "path": "/gateway/keys/{key_id}/disable"
+    },
+    "post_gateway_keys_key_id_enable": {
+      "method": "POST",
+      "path": "/gateway/keys/{key_id}/enable"
+    },
+    "post_gateway_keys_key_id_rotate": {
+      "method": "POST",
+      "path": "/gateway/keys/{key_id}/rotate"
+    },
+    "get_gateway_models": {
+      "method": "GET",
+      "path": "/gateway/models"
+    },
+    "get_gateway_models_model_id": {
+      "method": "GET",
+      "path": "/gateway/models/{model_id}"
+    },
+    "get_gateway_payload-logs": {
+      "method": "GET",
+      "path": "/gateway/payload-logs"
+    },
+    "get_gateway_payload-logs_access": {
+      "method": "GET",
+      "path": "/gateway/payload-logs/access"
+    },
+    "get_gateway_payload-logs_payload_id": {
+      "method": "GET",
+      "path": "/gateway/payload-logs/{payload_id}"
+    },
+    "get_gateway_policies": {
+      "method": "GET",
+      "path": "/gateway/policies"
+    },
+    "post_gateway_policies_keywords": {
+      "method": "POST",
+      "path": "/gateway/policies/keywords"
+    },
+    "delete_gateway_policies_keywords_keyword_id": {
+      "method": "DELETE",
+      "path": "/gateway/policies/keywords/{keyword_id}"
+    },
+    "post_gateway_policies_preview": {
+      "method": "POST",
+      "path": "/gateway/policies/preview"
+    },
+    "patch_gateway_policies_policy_id": {
+      "method": "PATCH",
+      "path": "/gateway/policies/{policy_id}"
+    },
+    "get_gateway_providers": {
+      "method": "GET",
+      "path": "/gateway/providers"
+    },
+    "post_gateway_providers": {
+      "method": "POST",
+      "path": "/gateway/providers"
+    },
+    "post_gateway_providers_verify-connection": {
+      "method": "POST",
+      "path": "/gateway/providers/verify-connection"
+    },
+    "delete_gateway_providers_provider_id": {
+      "method": "DELETE",
+      "path": "/gateway/providers/{provider_id}"
+    },
+    "get_gateway_providers_provider_id": {
+      "method": "GET",
+      "path": "/gateway/providers/{provider_id}"
+    },
+    "patch_gateway_providers_provider_id": {
+      "method": "PATCH",
+      "path": "/gateway/providers/{provider_id}"
+    },
+    "get_gateway_quota": {
+      "method": "GET",
+      "path": "/gateway/quota"
+    },
+    "get_gateway_request-logs": {
+      "method": "GET",
+      "path": "/gateway/request-logs"
+    },
+    "get_gateway_request-logs_request_id": {
+      "method": "GET",
+      "path": "/gateway/request-logs/{request_id}"
+    },
+    "get_gateway_routes": {
+      "method": "GET",
+      "path": "/gateway/routes"
+    },
+    "post_gateway_routes_preview": {
+      "method": "POST",
+      "path": "/gateway/routes/preview"
+    },
+    "get_gateway_routes_route_id": {
+      "method": "GET",
+      "path": "/gateway/routes/{route_id}"
+    },
+    "get_gateway_traces": {
+      "method": "GET",
+      "path": "/gateway/traces"
+    },
+    "get_gateway_traces_trace_id": {
+      "method": "GET",
+      "path": "/gateway/traces/{trace_id}"
+    },
+    "get_gateway_usage": {
+      "method": "GET",
+      "path": "/gateway/usage"
+    },
+    "get_gateway_usage_summary": {
+      "method": "GET",
+      "path": "/gateway/usage/summary"
+    },
+    "get_user_notification-preferences": {
+      "method": "GET",
+      "path": "/user/notification-preferences"
+    },
+    "put_user_notification-preferences": {
+      "method": "PUT",
+      "path": "/user/notification-preferences"
+    },
+    "put_user_password": {
+      "method": "PUT",
+      "path": "/user/password"
+    },
+    "get_user_profile": {
+      "method": "GET",
+      "path": "/user/profile"
+    },
+    "put_user_profile": {
+      "method": "PUT",
+      "path": "/user/profile"
+    },
+    "post_user_support-requests": {
+      "method": "POST",
+      "path": "/user/support-requests"
+    },
+    "get_users_me_invitation-stats": {
+      "method": "GET",
+      "path": "/users/me/invitation-stats"
+    },
+    "get_users_me_invitations": {
+      "method": "GET",
+      "path": "/users/me/invitations"
+    },
+    "get_users_me_invite-link": {
+      "method": "GET",
+      "path": "/users/me/invite-link"
+    },
+    "post_users_me_send-invitation": {
+      "method": "POST",
+      "path": "/users/me/send-invitation"
+    },
+    "get_webhook-endpoints": {
+      "method": "GET",
+      "path": "/webhook-endpoints"
+    },
+    "post_webhook-endpoints": {
+      "method": "POST",
+      "path": "/webhook-endpoints"
+    },
+    "delete_webhook-endpoints_endpoint_id": {
+      "method": "DELETE",
+      "path": "/webhook-endpoints/{endpoint_id}"
+    },
+    "get_webhook-endpoints_endpoint_id": {
+      "method": "GET",
+      "path": "/webhook-endpoints/{endpoint_id}"
+    },
+    "patch_webhook-endpoints_endpoint_id": {
+      "method": "PATCH",
+      "path": "/webhook-endpoints/{endpoint_id}"
+    },
+    "post_webhook-endpoints_endpoint_id_disable": {
+      "method": "POST",
+      "path": "/webhook-endpoints/{endpoint_id}/disable"
+    },
+    "post_webhook-endpoints_endpoint_id_enable": {
+      "method": "POST",
+      "path": "/webhook-endpoints/{endpoint_id}/enable"
+    },
+    "get_webhook-endpoints_endpoint_id_events": {
+      "method": "GET",
+      "path": "/webhook-endpoints/{endpoint_id}/events"
+    },
+    "post_webhook-endpoints_endpoint_id_rotate-secret": {
+      "method": "POST",
+      "path": "/webhook-endpoints/{endpoint_id}/rotate-secret"
+    },
+    "post_webhook-endpoints_endpoint_id_test": {
+      "method": "POST",
+      "path": "/webhook-endpoints/{endpoint_id}/test"
+    },
+    "get_webhook-event-types": {
+      "method": "GET",
+      "path": "/webhook-event-types"
+    },
+    "get_webhook-events": {
+      "method": "GET",
+      "path": "/webhook-events"
+    },
+    "post_webhook-events_bulk-redeliver": {
+      "method": "POST",
+      "path": "/webhook-events/bulk-redeliver"
+    },
+    "get_webhook-events_event_id": {
+      "method": "GET",
+      "path": "/webhook-events/{event_id}"
+    },
+    "post_webhook-events_event_id_redeliver": {
+      "method": "POST",
+      "path": "/webhook-events/{event_id}/redeliver"
+    },
+    "post_webhook-events_event_id_retry": {
+      "method": "POST",
+      "path": "/webhook-events/{event_id}/retry"
+    },
+    "get_workspaces": {
+      "method": "GET",
+      "path": "/workspaces"
+    },
+    "post_workspaces": {
+      "method": "POST",
+      "path": "/workspaces"
+    },
+    "delete_workspaces_workspace_id": {
+      "method": "DELETE",
+      "path": "/workspaces/{workspace_id}"
+    },
+    "get_workspaces_workspace_id": {
+      "method": "GET",
+      "path": "/workspaces/{workspace_id}"
+    },
+    "patch_workspaces_workspace_id": {
+      "method": "PATCH",
+      "path": "/workspaces/{workspace_id}"
+    },
+    "get_workspaces_workspace_id_activity": {
+      "method": "GET",
+      "path": "/workspaces/{workspace_id}/activity"
+    },
+    "get_workspaces_workspace_id_audit-logs": {
+      "method": "GET",
+      "path": "/workspaces/{workspace_id}/audit-logs"
+    },
+    "get_workspaces_workspace_id_audit-logs_audit_log_id": {
+      "method": "GET",
+      "path": "/workspaces/{workspace_id}/audit-logs/{audit_log_id}"
+    },
+    "get_workspaces_workspace_id_billing-details": {
+      "method": "GET",
+      "path": "/workspaces/{workspace_id}/billing-details"
+    },
+    "put_workspaces_workspace_id_billing-details": {
+      "method": "PUT",
+      "path": "/workspaces/{workspace_id}/billing-details"
+    },
+    "get_workspaces_workspace_id_governance_financial": {
+      "method": "GET",
+      "path": "/workspaces/{workspace_id}/governance/financial"
+    },
+    "put_workspaces_workspace_id_governance_financial": {
+      "method": "PUT",
+      "path": "/workspaces/{workspace_id}/governance/financial"
+    },
+    "get_workspaces_workspace_id_governance_financial_budget-caps": {
+      "method": "GET",
+      "path": "/workspaces/{workspace_id}/governance/financial/budget-caps"
+    },
+    "put_workspaces_workspace_id_governance_financial_budget-caps": {
+      "method": "PUT",
+      "path": "/workspaces/{workspace_id}/governance/financial/budget-caps"
+    },
+    "patch_workspaces_workspace_id_governance_financial_budget-caps_scope_type_scope_id": {
+      "method": "PATCH",
+      "path": "/workspaces/{workspace_id}/governance/financial/budget-caps/{scope_type}/{scope_id}"
+    },
+    "post_workspaces_workspace_id_governance_financial_preview": {
+      "method": "POST",
+      "path": "/workspaces/{workspace_id}/governance/financial/preview"
+    },
+    "get_workspaces_workspace_id_governance_financial_spend-summary": {
+      "method": "GET",
+      "path": "/workspaces/{workspace_id}/governance/financial/spend-summary"
+    },
+    "get_workspaces_workspace_id_governance_financial_spending-limits": {
+      "method": "GET",
+      "path": "/workspaces/{workspace_id}/governance/financial/spending-limits"
+    },
+    "put_workspaces_workspace_id_governance_financial_spending-limits": {
+      "method": "PUT",
+      "path": "/workspaces/{workspace_id}/governance/financial/spending-limits"
+    },
+    "patch_workspaces_workspace_id_governance_financial_spending-limits_users_user_id": {
+      "method": "PATCH",
+      "path": "/workspaces/{workspace_id}/governance/financial/spending-limits/users/{user_id}"
+    },
+    "get_workspaces_workspace_id_governance_financial_thresholds": {
+      "method": "GET",
+      "path": "/workspaces/{workspace_id}/governance/financial/thresholds"
+    },
+    "put_workspaces_workspace_id_governance_financial_thresholds": {
+      "method": "PUT",
+      "path": "/workspaces/{workspace_id}/governance/financial/thresholds"
+    },
+    "get_workspaces_workspace_id_invitations": {
+      "method": "GET",
+      "path": "/workspaces/{workspace_id}/invitations"
+    },
+    "post_workspaces_workspace_id_invitations": {
+      "method": "POST",
+      "path": "/workspaces/{workspace_id}/invitations"
+    },
+    "post_workspaces_workspace_id_invitations_invitation_id_resend": {
+      "method": "POST",
+      "path": "/workspaces/{workspace_id}/invitations/{invitation_id}/resend"
+    },
+    "post_workspaces_workspace_id_invitations_invitation_id_revoke": {
+      "method": "POST",
+      "path": "/workspaces/{workspace_id}/invitations/{invitation_id}/revoke"
+    },
+    "get_workspaces_workspace_id_logging-settings": {
+      "method": "GET",
+      "path": "/workspaces/{workspace_id}/logging-settings"
+    },
+    "put_workspaces_workspace_id_logging-settings": {
+      "method": "PUT",
+      "path": "/workspaces/{workspace_id}/logging-settings"
+    },
+    "get_workspaces_workspace_id_members": {
+      "method": "GET",
+      "path": "/workspaces/{workspace_id}/members"
+    },
+    "post_workspaces_workspace_id_members": {
+      "method": "POST",
+      "path": "/workspaces/{workspace_id}/members"
+    },
+    "get_workspaces_workspace_id_members_role-options": {
+      "method": "GET",
+      "path": "/workspaces/{workspace_id}/members/role-options"
+    },
+    "delete_workspaces_workspace_id_members_member_id": {
+      "method": "DELETE",
+      "path": "/workspaces/{workspace_id}/members/{member_id}"
+    },
+    "get_workspaces_workspace_id_members_member_id": {
+      "method": "GET",
+      "path": "/workspaces/{workspace_id}/members/{member_id}"
+    },
+    "patch_workspaces_workspace_id_members_member_id": {
+      "method": "PATCH",
+      "path": "/workspaces/{workspace_id}/members/{member_id}"
+    },
+    "get_workspaces_workspace_id_members_member_id_permissions": {
+      "method": "GET",
+      "path": "/workspaces/{workspace_id}/members/{member_id}/permissions"
+    },
+    "put_workspaces_workspace_id_members_member_id_permissions": {
+      "method": "PUT",
+      "path": "/workspaces/{workspace_id}/members/{member_id}/permissions"
+    },
+    "post_workspaces_workspace_id_members_member_id_permissions_reset": {
+      "method": "POST",
+      "path": "/workspaces/{workspace_id}/members/{member_id}/permissions/reset"
+    },
+    "get_workspaces_workspace_id_overview": {
+      "method": "GET",
+      "path": "/workspaces/{workspace_id}/overview"
+    },
+    "get_workspaces_workspace_id_permissions": {
+      "method": "GET",
+      "path": "/workspaces/{workspace_id}/permissions"
+    },
+    "get_workspaces_workspace_id_quota-summary": {
+      "method": "GET",
+      "path": "/workspaces/{workspace_id}/quota-summary"
+    },
+    "get_workspaces_workspace_id_quota-usage": {
+      "method": "GET",
+      "path": "/workspaces/{workspace_id}/quota-usage"
+    },
+    "get_workspaces_workspace_id_roles": {
+      "method": "GET",
+      "path": "/workspaces/{workspace_id}/roles"
+    },
+    "post_workspaces_workspace_id_roles": {
+      "method": "POST",
+      "path": "/workspaces/{workspace_id}/roles"
+    },
+    "delete_workspaces_workspace_id_roles_role_id": {
+      "method": "DELETE",
+      "path": "/workspaces/{workspace_id}/roles/{role_id}"
+    },
+    "get_workspaces_workspace_id_roles_role_id": {
+      "method": "GET",
+      "path": "/workspaces/{workspace_id}/roles/{role_id}"
+    },
+    "patch_workspaces_workspace_id_roles_role_id": {
+      "method": "PATCH",
+      "path": "/workspaces/{workspace_id}/roles/{role_id}"
+    },
+    "get_workspaces_workspace_id_teams": {
+      "method": "GET",
+      "path": "/workspaces/{workspace_id}/teams"
+    },
+    "post_workspaces_workspace_id_teams": {
+      "method": "POST",
+      "path": "/workspaces/{workspace_id}/teams"
+    },
+    "delete_workspaces_workspace_id_teams_team_id": {
+      "method": "DELETE",
+      "path": "/workspaces/{workspace_id}/teams/{team_id}"
+    },
+    "get_workspaces_workspace_id_teams_team_id": {
+      "method": "GET",
+      "path": "/workspaces/{workspace_id}/teams/{team_id}"
+    },
+    "patch_workspaces_workspace_id_teams_team_id": {
+      "method": "PATCH",
+      "path": "/workspaces/{workspace_id}/teams/{team_id}"
+    }
+  }
+}

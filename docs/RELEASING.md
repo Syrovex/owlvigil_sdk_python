@@ -11,3 +11,6 @@
 
 Do not create or store a long-lived PyPI token when trusted publishing is
 available.
+
+The public source distribution includes the OpenAPI contract snapshots under
+`contracts/`; the build does not require access to the private API repository.

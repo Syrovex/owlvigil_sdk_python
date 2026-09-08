@@ -26,7 +26,7 @@ jobs:
           python-version: ${{ matrix.python }}
           cache: pip
       - run: python -m pip install --upgrade pip
-      - run: python -m pip install -e '.[test]' build twine
+      - run: python -m pip install -e '.[test,release]'
       - run: pytest
       - run: python -m build
       - run: python -m twine check dist/*

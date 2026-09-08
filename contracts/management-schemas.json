@@ -1,0 +1,5459 @@
+{
+  "Envelope": {
+    "properties": {
+      "code": {
+        "type": "string"
+      },
+      "data": {},
+      "message": {
+        "type": "string"
+      },
+      "request_id": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "request_id",
+      "code",
+      "message",
+      "data"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_httpapi.Deleted": {
+    "properties": {
+      "deleted": {
+        "type": "boolean"
+      }
+    },
+    "required": [
+      "deleted"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_httpapi.List_github.com_owlvigil_owlvigil_openapi_internal_modules_access.Invitation_": {
+    "properties": {
+      "items": {
+        "items": {
+          "$ref": "#/definitions/github.com_owlvigil_owlvigil_openapi_internal_modules_access.Invitation"
+        },
+        "type": "array"
+      },
+      "page_info": {
+        "$ref": "#/definitions/github.com_owlvigil_owlvigil_openapi_internal_httpapi.PageInfo"
+      }
+    },
+    "required": [
+      "items",
+      "page_info"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_httpapi.List_github.com_owlvigil_owlvigil_openapi_internal_modules_access.Member_": {
+    "properties": {
+      "items": {
+        "items": {
+          "$ref": "#/definitions/github.com_owlvigil_owlvigil_openapi_internal_modules_access.Member"
+        },
+        "type": "array"
+      },
+      "page_info": {
+        "$ref": "#/definitions/github.com_owlvigil_owlvigil_openapi_internal_httpapi.PageInfo"
+      }
+    },
+    "required": [
+      "items",
+      "page_info"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_httpapi.List_github.com_owlvigil_owlvigil_openapi_internal_modules_access.Role_": {
+    "properties": {
+      "items": {
+        "items": {
+          "$ref": "#/definitions/github.com_owlvigil_owlvigil_openapi_internal_modules_access.Role"
+        },
+        "type": "array"
+      },
+      "page_info": {
+        "$ref": "#/definitions/github.com_owlvigil_owlvigil_openapi_internal_httpapi.PageInfo"
+      }
+    },
+    "required": [
+      "items",
+      "page_info"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_httpapi.List_github.com_owlvigil_owlvigil_openapi_internal_modules_access.Team_": {
+    "properties": {
+      "items": {
+        "items": {
+          "$ref": "#/definitions/github.com_owlvigil_owlvigil_openapi_internal_modules_access.Team"
+        },
+        "type": "array"
+      },
+      "page_info": {
+        "$ref": "#/definitions/github.com_owlvigil_owlvigil_openapi_internal_httpapi.PageInfo"
+      }
+    },
+    "required": [
+      "items",
+      "page_info"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_httpapi.List_github.com_owlvigil_owlvigil_openapi_internal_modules_billing.Invoice_": {
+    "properties": {
+      "items": {
+        "items": {
+          "$ref": "#/definitions/github.com_owlvigil_owlvigil_openapi_internal_modules_billing.Invoice"
+        },
+        "type": "array"
+      },
+      "page_info": {
+        "$ref": "#/definitions/github.com_owlvigil_owlvigil_openapi_internal_httpapi.PageInfo"
+      }
+    },
+    "required": [
+      "items",
+      "page_info"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_httpapi.List_github.com_owlvigil_owlvigil_openapi_internal_modules_billing.Order_": {
+    "properties": {
+      "items": {
+        "items": {
+          "$ref": "#/definitions/github.com_owlvigil_owlvigil_openapi_internal_modules_billing.Order"
+        },
+        "type": "array"
+      },
+      "page_info": {
+        "$ref": "#/definitions/github.com_owlvigil_owlvigil_openapi_internal_httpapi.PageInfo"
+      }
+    },
+    "required": [
+      "items",
+      "page_info"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_httpapi.List_github.com_owlvigil_owlvigil_openapi_internal_modules_billing.PaymentMethod_": {
+    "properties": {
+      "items": {
+        "items": {
+          "$ref": "#/definitions/github.com_owlvigil_owlvigil_openapi_internal_modules_billing.PaymentMethod"
+        },
+        "type": "array"
+      },
+      "page_info": {
+        "$ref": "#/definitions/github.com_owlvigil_owlvigil_openapi_internal_httpapi.PageInfo"
+      }
+    },
+    "required": [
+      "items",
+      "page_info"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_httpapi.List_github.com_owlvigil_owlvigil_openapi_internal_modules_billing.Plan_": {
+    "properties": {
+      "items": {
+        "items": {
+          "$ref": "#/definitions/github.com_owlvigil_owlvigil_openapi_internal_modules_billing.Plan"
+        },
+        "type": "array"
+      },
+      "page_info": {
+        "$ref": "#/definitions/github.com_owlvigil_owlvigil_openapi_internal_httpapi.PageInfo"
+      }
+    },
+    "required": [
+      "items",
+      "page_info"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_httpapi.List_github.com_owlvigil_owlvigil_openapi_internal_modules_billing.TopupPlan_": {
+    "properties": {
+      "items": {
+        "items": {
+          "$ref": "#/definitions/github.com_owlvigil_owlvigil_openapi_internal_modules_billing.TopupPlan"
+        },
+        "type": "array"
+      },
+      "page_info": {
+        "$ref": "#/definitions/github.com_owlvigil_owlvigil_openapi_internal_httpapi.PageInfo"
+      }
+    },
+    "required": [
+      "items",
+      "page_info"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_httpapi.List_github.com_owlvigil_owlvigil_openapi_internal_modules_catalog.Model_": {
+    "properties": {
+      "items": {
+        "items": {
+          "$ref": "#/definitions/github.com_owlvigil_owlvigil_openapi_internal_modules_catalog.Model"
+        },
+        "type": "array"
+      },
+      "page_info": {
+        "$ref": "#/definitions/github.com_owlvigil_owlvigil_openapi_internal_httpapi.PageInfo"
+      }
+    },
+    "required": [
+      "items",
+      "page_info"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_httpapi.List_github.com_owlvigil_owlvigil_openapi_internal_modules_catalog.RouteCandidate_": {
+    "properties": {
+      "items": {
+        "items": {
+          "$ref": "#/definitions/github.com_owlvigil_owlvigil_openapi_internal_modules_catalog.RouteCandidate"
+        },
+        "type": "array"
+      },
+      "page_info": {
+        "$ref": "#/definitions/github.com_owlvigil_owlvigil_openapi_internal_httpapi.PageInfo"
+      }
+    },
+    "required": [
+      "items",
+      "page_info"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_httpapi.List_github.com_owlvigil_owlvigil_openapi_internal_modules_financial.MemberSpendingLimit_": {
+    "properties": {
+      "items": {
+        "items": {
+          "$ref": "#/definitions/github.com_owlvigil_owlvigil_openapi_internal_modules_financial.MemberSpendingLimit"
+        },
+        "type": "array"
+      },
+      "page_info": {
+        "$ref": "#/definitions/github.com_owlvigil_owlvigil_openapi_internal_httpapi.PageInfo"
+      }
+    },
+    "required": [
+      "items",
+      "page_info"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_httpapi.List_github.com_owlvigil_owlvigil_openapi_internal_modules_gatewaykey.DTO_": {
+    "properties": {
+      "items": {
+        "items": {
+          "$ref": "#/definitions/github.com_owlvigil_owlvigil_openapi_internal_modules_gatewaykey.DTO"
+        },
+        "type": "array"
+      },
+      "page_info": {
+        "$ref": "#/definitions/github.com_owlvigil_owlvigil_openapi_internal_httpapi.PageInfo"
+      }
+    },
+    "required": [
+      "items",
+      "page_info"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_httpapi.List_github.com_owlvigil_owlvigil_openapi_internal_modules_logs.AuditLog_": {
+    "properties": {
+      "items": {
+        "items": {
+          "$ref": "#/definitions/github.com_owlvigil_owlvigil_openapi_internal_modules_logs.AuditLog"
+        },
+        "type": "array"
+      },
+      "page_info": {
+        "$ref": "#/definitions/github.com_owlvigil_owlvigil_openapi_internal_httpapi.PageInfo"
+      }
+    },
+    "required": [
+      "items",
+      "page_info"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_httpapi.List_github.com_owlvigil_owlvigil_openapi_internal_modules_logs.PayloadSummary_": {
+    "properties": {
+      "items": {
+        "items": {
+          "$ref": "#/definitions/github.com_owlvigil_owlvigil_openapi_internal_modules_logs.PayloadSummary"
+        },
+        "type": "array"
+      },
+      "page_info": {
+        "$ref": "#/definitions/github.com_owlvigil_owlvigil_openapi_internal_httpapi.PageInfo"
+      }
+    },
+    "required": [
+      "items",
+      "page_info"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_httpapi.List_github.com_owlvigil_owlvigil_openapi_internal_modules_observability.RequestLog_": {
+    "properties": {
+      "items": {
+        "items": {
+          "$ref": "#/definitions/github.com_owlvigil_owlvigil_openapi_internal_modules_observability.RequestLog"
+        },
+        "type": "array"
+      },
+      "page_info": {
+        "$ref": "#/definitions/github.com_owlvigil_owlvigil_openapi_internal_httpapi.PageInfo"
+      }
+    },
+    "required": [
+      "items",
+      "page_info"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_httpapi.List_github.com_owlvigil_owlvigil_openapi_internal_modules_observability.Trace_": {
+    "properties": {
+      "items": {
+        "items": {
+          "$ref": "#/definitions/github.com_owlvigil_owlvigil_openapi_internal_modules_observability.Trace"
+        },
+        "type": "array"
+      },
+      "page_info": {
+        "$ref": "#/definitions/github.com_owlvigil_owlvigil_openapi_internal_httpapi.PageInfo"
+      }
+    },
+    "required": [
+      "items",
+      "page_info"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_httpapi.List_github.com_owlvigil_owlvigil_openapi_internal_modules_provider.DTO_": {
+    "properties": {
+      "items": {
+        "items": {
+          "$ref": "#/definitions/github.com_owlvigil_owlvigil_openapi_internal_modules_provider.DTO"
+        },
+        "type": "array"
+      },
+      "page_info": {
+        "$ref": "#/definitions/github.com_owlvigil_owlvigil_openapi_internal_httpapi.PageInfo"
+      }
+    },
+    "required": [
+      "items",
+      "page_info"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_httpapi.List_github.com_owlvigil_owlvigil_openapi_internal_modules_usage.Record_": {
+    "properties": {
+      "items": {
+        "items": {
+          "$ref": "#/definitions/github.com_owlvigil_owlvigil_openapi_internal_modules_usage.Record"
+        },
+        "type": "array"
+      },
+      "page_info": {
+        "$ref": "#/definitions/github.com_owlvigil_owlvigil_openapi_internal_httpapi.PageInfo"
+      }
+    },
+    "required": [
+      "items",
+      "page_info"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_httpapi.List_github.com_owlvigil_owlvigil_openapi_internal_modules_webhook.Endpoint_": {
+    "properties": {
+      "items": {
+        "items": {
+          "$ref": "#/definitions/github.com_owlvigil_owlvigil_openapi_internal_modules_webhook.Endpoint"
+        },
+        "type": "array"
+      },
+      "page_info": {
+        "$ref": "#/definitions/github.com_owlvigil_owlvigil_openapi_internal_httpapi.PageInfo"
+      }
+    },
+    "required": [
+      "items",
+      "page_info"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_httpapi.List_github.com_owlvigil_owlvigil_openapi_internal_modules_webhook.EventType_": {
+    "properties": {
+      "items": {
+        "items": {
+          "$ref": "#/definitions/github.com_owlvigil_owlvigil_openapi_internal_modules_webhook.EventType"
+        },
+        "type": "array"
+      },
+      "page_info": {
+        "$ref": "#/definitions/github.com_owlvigil_owlvigil_openapi_internal_httpapi.PageInfo"
+      }
+    },
+    "required": [
+      "items",
+      "page_info"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_httpapi.List_github.com_owlvigil_owlvigil_openapi_internal_modules_webhook.Event_": {
+    "properties": {
+      "items": {
+        "items": {
+          "$ref": "#/definitions/github.com_owlvigil_owlvigil_openapi_internal_modules_webhook.Event"
+        },
+        "type": "array"
+      },
+      "page_info": {
+        "$ref": "#/definitions/github.com_owlvigil_owlvigil_openapi_internal_httpapi.PageInfo"
+      }
+    },
+    "required": [
+      "items",
+      "page_info"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_httpapi.List_github.com_owlvigil_owlvigil_openapi_internal_modules_workspace.DTO_": {
+    "properties": {
+      "items": {
+        "items": {
+          "$ref": "#/definitions/github.com_owlvigil_owlvigil_openapi_internal_modules_workspace.DTO"
+        },
+        "type": "array"
+      },
+      "page_info": {
+        "$ref": "#/definitions/github.com_owlvigil_owlvigil_openapi_internal_httpapi.PageInfo"
+      }
+    },
+    "required": [
+      "items",
+      "page_info"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_httpapi.PageInfo": {
+    "properties": {
+      "has_more": {
+        "type": "boolean"
+      },
+      "next_cursor": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "has_more"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_access.CreateInvitationRequest": {
+    "properties": {
+      "email": {
+        "minLength": 1,
+        "pattern": ".*\\S.*",
+        "type": "string"
+      },
+      "expires_in_hours": {
+        "format": "int64",
+        "minimum": 0,
+        "type": "integer"
+      },
+      "role": {
+        "minLength": 1,
+        "pattern": ".*\\S.*",
+        "type": "string"
+      },
+      "team_id": {
+        "format": "int64",
+        "type": "integer"
+      }
+    },
+    "required": [
+      "email",
+      "role"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_access.CreateRoleRequest": {
+    "properties": {
+      "description": {
+        "type": "string"
+      },
+      "key": {
+        "type": "string"
+      },
+      "name": {
+        "minLength": 1,
+        "pattern": ".*\\S.*",
+        "type": "string"
+      },
+      "permissions": {
+        "items": {
+          "type": "string"
+        },
+        "type": "array"
+      }
+    },
+    "required": [
+      "name",
+      "permissions"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_access.CreateTeamRequest": {
+    "properties": {
+      "description": {
+        "type": "string"
+      },
+      "monthly_budget_limit": {
+        "format": "double",
+        "minimum": 0,
+        "type": "number"
+      },
+      "name": {
+        "minLength": 1,
+        "pattern": ".*\\S.*",
+        "type": "string"
+      }
+    },
+    "required": [
+      "name"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_access.Invitation": {
+    "properties": {
+      "created_at": {
+        "format": "date-time",
+        "type": "string"
+      },
+      "email": {
+        "type": "string"
+      },
+      "expires_at": {
+        "format": "date-time",
+        "type": "string"
+      },
+      "id": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "invited_by": {
+        "$ref": "#/definitions/github.com_owlvigil_owlvigil_openapi_internal_modules_access.UserBrief"
+      },
+      "invited_by_user_id": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "project_id": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "role": {
+        "type": "string"
+      },
+      "status": {
+        "type": "string"
+      },
+      "team_id": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "token": {
+        "type": "string"
+      },
+      "updated_at": {
+        "format": "date-time",
+        "type": "string"
+      },
+      "workspace_id": {
+        "format": "int64",
+        "type": "integer"
+      }
+    },
+    "required": [
+      "created_at",
+      "email",
+      "expires_at",
+      "id",
+      "invited_by_user_id",
+      "project_id",
+      "role",
+      "status",
+      "updated_at",
+      "workspace_id"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_access.InviteMemberRequest": {
+    "properties": {
+      "email": {
+        "minLength": 1,
+        "pattern": ".*\\S.*",
+        "type": "string"
+      },
+      "role": {
+        "minLength": 1,
+        "pattern": ".*\\S.*",
+        "type": "string"
+      },
+      "team_id": {
+        "format": "int64",
+        "type": "integer"
+      }
+    },
+    "required": [
+      "email",
+      "role"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_access.Member": {
+    "properties": {
+      "email": {
+        "type": "string"
+      },
+      "id": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "invitation_expires_at": {
+        "format": "date-time",
+        "type": "string"
+      },
+      "invitation_id": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "invitation_token": {
+        "type": "string"
+      },
+      "invited_by": {
+        "type": "string"
+      },
+      "joined_at": {
+        "format": "date-time",
+        "type": "string"
+      },
+      "member_type": {
+        "type": "string"
+      },
+      "name": {
+        "type": "string"
+      },
+      "role": {
+        "type": "string"
+      },
+      "status": {
+        "type": "string"
+      },
+      "team": {
+        "type": "string"
+      },
+      "team_id": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "user": {
+        "$ref": "#/definitions/github.com_owlvigil_owlvigil_openapi_internal_modules_access.UserBrief"
+      },
+      "user_id": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "workspace_id": {
+        "format": "int64",
+        "type": "integer"
+      }
+    },
+    "required": [
+      "email",
+      "id",
+      "joined_at",
+      "name",
+      "role",
+      "status",
+      "user_id",
+      "workspace_id"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_access.MemberPermissions": {
+    "properties": {
+      "effective": {
+        "items": {
+          "type": "string"
+        },
+        "type": "array"
+      },
+      "groups": {
+        "items": {
+          "$ref": "#/definitions/github.com_owlvigil_owlvigil_openapi_internal_modules_access.PermissionGroup"
+        },
+        "type": "array"
+      },
+      "role": {
+        "type": "string"
+      },
+      "user_id": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "workspace_id": {
+        "format": "int64",
+        "type": "integer"
+      }
+    },
+    "required": [
+      "effective",
+      "groups",
+      "role",
+      "user_id",
+      "workspace_id"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_access.Permission": {
+    "properties": {
+      "default": {
+        "type": "boolean"
+      },
+      "effective": {
+        "type": "boolean"
+      },
+      "id": {
+        "type": "string"
+      },
+      "label": {
+        "type": "string"
+      },
+      "override": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "default",
+      "effective",
+      "id",
+      "label"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_access.PermissionGroup": {
+    "properties": {
+      "id": {
+        "type": "string"
+      },
+      "label": {
+        "type": "string"
+      },
+      "permissions": {
+        "items": {
+          "$ref": "#/definitions/github.com_owlvigil_owlvigil_openapi_internal_modules_access.Permission"
+        },
+        "type": "array"
+      }
+    },
+    "required": [
+      "id",
+      "label",
+      "permissions"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_access.PermissionGroups": {
+    "properties": {
+      "groups": {
+        "items": {
+          "$ref": "#/definitions/github.com_owlvigil_owlvigil_openapi_internal_modules_access.PermissionGroup"
+        },
+        "type": "array"
+      }
+    },
+    "required": [
+      "groups"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_access.Role": {
+    "properties": {
+      "built_in": {
+        "type": "boolean"
+      },
+      "created_at": {
+        "format": "date-time",
+        "type": "string"
+      },
+      "description": {
+        "type": "string"
+      },
+      "id": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "key": {
+        "type": "string"
+      },
+      "name": {
+        "type": "string"
+      },
+      "permissions": {
+        "items": {
+          "type": "string"
+        },
+        "type": "array"
+      },
+      "scope_id": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "scope_type": {
+        "type": "string"
+      },
+      "updated_at": {
+        "format": "date-time",
+        "type": "string"
+      }
+    },
+    "required": [
+      "built_in",
+      "created_at",
+      "id",
+      "name",
+      "permissions",
+      "scope_id",
+      "scope_type",
+      "updated_at"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_access.RoleOption": {
+    "properties": {
+      "enabled": {
+        "type": "boolean"
+      },
+      "label": {
+        "type": "string"
+      },
+      "value": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "enabled",
+      "label",
+      "value"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_access.RoleOptions": {
+    "properties": {
+      "edit_roles": {
+        "items": {
+          "$ref": "#/definitions/github.com_owlvigil_owlvigil_openapi_internal_modules_access.RoleOption"
+        },
+        "type": "array"
+      },
+      "invite_roles": {
+        "items": {
+          "$ref": "#/definitions/github.com_owlvigil_owlvigil_openapi_internal_modules_access.RoleOption"
+        },
+        "type": "array"
+      }
+    },
+    "required": [
+      "edit_roles",
+      "invite_roles"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_access.Team": {
+    "properties": {
+      "created_at": {
+        "format": "date-time",
+        "type": "string"
+      },
+      "deleted_at": {
+        "format": "date-time",
+        "type": "string"
+      },
+      "description": {
+        "type": "string"
+      },
+      "id": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "is_default": {
+        "type": "boolean"
+      },
+      "member_count": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "monthly_budget_limit": {
+        "format": "double",
+        "type": "number"
+      },
+      "name": {
+        "type": "string"
+      },
+      "project_id": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "status": {
+        "type": "string"
+      },
+      "updated_at": {
+        "format": "date-time",
+        "type": "string"
+      },
+      "workspace_id": {
+        "format": "int64",
+        "type": "integer"
+      }
+    },
+    "required": [
+      "created_at",
+      "id",
+      "is_default",
+      "member_count",
+      "name",
+      "project_id",
+      "status",
+      "updated_at",
+      "workspace_id"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_access.UpdateMemberRequest": {
+    "properties": {
+      "role": {
+        "type": "string"
+      },
+      "status": {
+        "enum": [
+          "active",
+          "pending",
+          "suspended"
+        ],
+        "type": "string"
+      },
+      "team_id": {
+        "format": "int64",
+        "type": "integer"
+      }
+    },
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_access.UpdatePermissionsRequest": {
+    "properties": {
+      "permissions": {
+        "additionalProperties": {
+          "type": "boolean"
+        },
+        "type": "object"
+      }
+    },
+    "required": [
+      "permissions"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_access.UpdateRoleRequest": {
+    "properties": {
+      "description": {
+        "type": "string"
+      },
+      "name": {
+        "type": "string"
+      },
+      "permissions": {
+        "items": {
+          "type": "string"
+        },
+        "type": "array"
+      }
+    },
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_access.UpdateTeamRequest": {
+    "properties": {
+      "description": {
+        "type": "string"
+      },
+      "monthly_budget_limit": {
+        "format": "double",
+        "minimum": 0,
+        "type": "number"
+      },
+      "name": {
+        "type": "string"
+      }
+    },
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_access.UserBrief": {
+    "properties": {
+      "email": {
+        "type": "string"
+      },
+      "id": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "name": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "email",
+      "id",
+      "name"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_account.ChangePasswordRequest": {
+    "properties": {
+      "new_password": {
+        "minLength": 8,
+        "type": "string"
+      },
+      "old_password": {
+        "minLength": 1,
+        "pattern": ".*\\S.*",
+        "type": "string"
+      }
+    },
+    "required": [
+      "new_password",
+      "old_password"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_account.Invitation": {
+    "properties": {
+      "converted_at": {
+        "format": "date-time",
+        "type": "string"
+      },
+      "created_at": {
+        "format": "date-time",
+        "type": "string"
+      },
+      "id": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "invite_code": {
+        "type": "string"
+      },
+      "invited_email": {
+        "type": "string"
+      },
+      "invited_user_id": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "inviter_user_id": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "status": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "converted_at",
+      "created_at",
+      "id",
+      "invite_code",
+      "invited_email",
+      "invited_user_id",
+      "inviter_user_id",
+      "status"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_account.InvitationSent": {
+    "properties": {
+      "emails_sent": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "message": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "emails_sent",
+      "message"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_account.InvitationStats": {
+    "properties": {
+      "conversion_rate": {
+        "format": "double",
+        "type": "number"
+      },
+      "converted_invitations": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "invite_code": {
+        "type": "string"
+      },
+      "invite_link": {
+        "type": "string"
+      },
+      "pending_invitations": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "total_invitations": {
+        "format": "int64",
+        "type": "integer"
+      }
+    },
+    "required": [
+      "conversion_rate",
+      "converted_invitations",
+      "invite_code",
+      "invite_link",
+      "pending_invitations",
+      "total_invitations"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_account.Message": {
+    "properties": {
+      "message": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "message"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_account.NotificationPreferences": {
+    "properties": {
+      "billing": {
+        "type": "boolean"
+      },
+      "budget": {
+        "type": "boolean"
+      },
+      "marketing": {
+        "type": "boolean"
+      },
+      "reports": {
+        "type": "boolean"
+      }
+    },
+    "required": [
+      "billing",
+      "budget",
+      "marketing",
+      "reports"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_account.NotifyEmailEntry": {
+    "properties": {
+      "disabled": {
+        "type": "boolean"
+      },
+      "email": {
+        "type": "string"
+      },
+      "verified": {
+        "type": "boolean"
+      }
+    },
+    "required": [
+      "disabled",
+      "email",
+      "verified"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_account.Profile": {
+    "properties": {
+      "avatar_url": {
+        "type": "string"
+      },
+      "balance_notify_enabled": {
+        "type": "boolean"
+      },
+      "balance_notify_extra_emails": {
+        "items": {
+          "$ref": "#/definitions/github.com_owlvigil_owlvigil_openapi_internal_modules_account.NotifyEmailEntry"
+        },
+        "type": "array"
+      },
+      "balance_notify_threshold": {
+        "format": "double",
+        "type": "number"
+      },
+      "created_at": {
+        "format": "date-time",
+        "type": "string"
+      },
+      "default_workspace_id": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "display_name": {
+        "type": "string"
+      },
+      "email": {
+        "type": "string"
+      },
+      "id": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "name": {
+        "type": "string"
+      },
+      "status": {
+        "type": "string"
+      },
+      "updated_at": {
+        "format": "date-time",
+        "type": "string"
+      },
+      "user_id": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "username": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "balance_notify_enabled",
+      "created_at",
+      "email",
+      "id",
+      "status",
+      "updated_at",
+      "user_id",
+      "username"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_account.SendInvitationRequest": {
+    "properties": {
+      "emails": {
+        "items": {
+          "minLength": 1,
+          "pattern": ".*\\S.*",
+          "type": "string"
+        },
+        "minItems": 1,
+        "type": "array"
+      },
+      "message": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "emails"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_account.SupportRequest": {
+    "properties": {
+      "description": {
+        "maxLength": 2000,
+        "minLength": 1,
+        "pattern": ".*\\S.*",
+        "type": "string"
+      },
+      "issue_type": {
+        "enum": [
+          "Technical Issue",
+          "Billing & Plan",
+          "Provider / Gateway Setup",
+          "Usage, Cost & Budget",
+          "Workspace & Team Access",
+          "Governance & Compliance",
+          "Bug Report",
+          "Other"
+        ],
+        "minLength": 1,
+        "type": "string"
+      },
+      "subject": {
+        "maxLength": 140,
+        "minLength": 1,
+        "pattern": ".*\\S.*",
+        "type": "string"
+      }
+    },
+    "required": [
+      "description",
+      "issue_type",
+      "subject"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_account.UpdateProfileRequest": {
+    "properties": {
+      "avatar_url": {},
+      "balance_notify_enabled": {
+        "type": "boolean"
+      },
+      "balance_notify_extra_emails": {
+        "items": {
+          "$ref": "#/definitions/github.com_owlvigil_owlvigil_openapi_internal_modules_account.NotifyEmailEntry"
+        },
+        "type": "array"
+      },
+      "balance_notify_threshold": {},
+      "default_workspace_id": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "username": {
+        "type": "string"
+      }
+    },
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_billing.AutoCharge": {
+    "properties": {
+      "charge_amount": {
+        "format": "double",
+        "type": "number"
+      },
+      "configured": {
+        "type": "boolean"
+      },
+      "currency": {
+        "type": "string"
+      },
+      "enabled": {
+        "type": "boolean"
+      },
+      "failure_reason": {
+        "type": "string"
+      },
+      "payer_name": {
+        "type": "string"
+      },
+      "payer_user_id": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "payment_method": {
+        "$ref": "#/definitions/github.com_owlvigil_owlvigil_openapi_internal_modules_billing.AutoChargePaymentMethod"
+      },
+      "status": {
+        "type": "string"
+      },
+      "threshold_amount": {
+        "format": "double",
+        "type": "number"
+      },
+      "workspace_id": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "workspace_name": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "charge_amount",
+      "configured",
+      "currency",
+      "enabled",
+      "status",
+      "threshold_amount",
+      "workspace_id",
+      "workspace_name"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_billing.AutoChargePaymentMethod": {
+    "properties": {
+      "brand": {
+        "type": "string"
+      },
+      "last4": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "brand",
+      "last4"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_billing.Balance": {
+    "properties": {
+      "balance": {
+        "format": "double",
+        "type": "number"
+      },
+      "workspace_id": {
+        "format": "int64",
+        "type": "integer"
+      }
+    },
+    "required": [
+      "balance",
+      "workspace_id"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_billing.BillingContact": {
+    "properties": {
+      "address": {
+        "type": "string"
+      },
+      "cc_recipients": {
+        "items": {
+          "type": "string"
+        },
+        "type": "array"
+      },
+      "email": {
+        "type": "string"
+      },
+      "name": {
+        "type": "string"
+      },
+      "phone": {
+        "type": "string"
+      },
+      "tax_id": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "address",
+      "cc_recipients",
+      "email",
+      "name",
+      "phone",
+      "tax_id"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_billing.CancelSubscriptionRequest": {
+    "properties": {
+      "cancel_immediately": {
+        "type": "boolean"
+      },
+      "reason": {
+        "type": "string"
+      }
+    },
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_billing.ChangeSubscriptionRequest": {
+    "properties": {
+      "interval": {
+        "type": "string"
+      },
+      "plan_id": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "interval",
+      "plan_id"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_billing.Checkout": {
+    "properties": {
+      "amount": {
+        "format": "double",
+        "type": "number"
+      },
+      "checkout_url": {
+        "type": "string"
+      },
+      "currency": {
+        "type": "string"
+      },
+      "expires_at": {
+        "format": "date-time",
+        "type": "string"
+      },
+      "order_id": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "order_type": {
+        "type": "string"
+      },
+      "out_trade_no": {
+        "type": "string"
+      },
+      "session_id": {
+        "type": "string"
+      },
+      "status": {
+        "type": "string"
+      },
+      "stripe_mode": {
+        "type": "string"
+      },
+      "subscription": {
+        "type": "string"
+      },
+      "workspace_id": {
+        "format": "int64",
+        "type": "integer"
+      }
+    },
+    "required": [
+      "amount",
+      "checkout_url",
+      "currency",
+      "expires_at",
+      "order_id",
+      "order_type",
+      "out_trade_no",
+      "session_id",
+      "status",
+      "stripe_mode",
+      "workspace_id"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_billing.CheckoutConfirmation": {
+    "properties": {
+      "balance": {
+        "format": "double",
+        "type": "number"
+      },
+      "order_id": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "order_type": {
+        "type": "string"
+      },
+      "status": {
+        "type": "string"
+      },
+      "total_recharged": {
+        "format": "double",
+        "type": "number"
+      },
+      "workspace_id": {
+        "format": "int64",
+        "type": "integer"
+      }
+    },
+    "required": [
+      "balance",
+      "order_id",
+      "order_type",
+      "status",
+      "total_recharged",
+      "workspace_id"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_billing.ConfirmStripeSessionRequest": {
+    "properties": {
+      "session_id": {
+        "type": "string"
+      }
+    },
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_billing.ConfirmSubscriptionRequest": {
+    "properties": {
+      "plan_id": {
+        "type": "string"
+      },
+      "stripe_subscription_id": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "plan_id",
+      "stripe_subscription_id"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_billing.ConfirmTopupRequest": {
+    "properties": {
+      "client_secret": {
+        "type": "string"
+      },
+      "payment_intent_id": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "client_secret",
+      "payment_intent_id"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_billing.Details": {
+    "properties": {
+      "details": {
+        "additionalProperties": {},
+        "type": "object"
+      },
+      "workspace_id": {
+        "format": "int64",
+        "type": "integer"
+      }
+    },
+    "required": [
+      "details",
+      "workspace_id"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_billing.InAppPayment": {
+    "properties": {
+      "amount": {
+        "format": "double",
+        "type": "number"
+      },
+      "balance": {
+        "format": "double",
+        "type": "number"
+      },
+      "client_secret": {
+        "type": "string"
+      },
+      "currency": {
+        "type": "string"
+      },
+      "message": {
+        "type": "string"
+      },
+      "order_id": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "order_type": {
+        "type": "string"
+      },
+      "payment_intent_id": {
+        "type": "string"
+      },
+      "status": {
+        "type": "string"
+      },
+      "total_recharged": {
+        "format": "double",
+        "type": "number"
+      },
+      "workspace_id": {
+        "format": "int64",
+        "type": "integer"
+      }
+    },
+    "required": [
+      "amount",
+      "currency",
+      "order_id",
+      "order_type",
+      "status",
+      "workspace_id"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_billing.Invoice": {
+    "properties": {
+      "amount_due": {
+        "format": "double",
+        "type": "number"
+      },
+      "amount_paid": {
+        "format": "double",
+        "type": "number"
+      },
+      "created_at": {
+        "format": "date-time",
+        "type": "string"
+      },
+      "currency": {
+        "type": "string"
+      },
+      "due_date": {
+        "format": "date-time",
+        "type": "string"
+      },
+      "hosted_invoice_url": {
+        "type": "string"
+      },
+      "id": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "invoice_number": {
+        "type": "string"
+      },
+      "invoice_pdf_url": {
+        "type": "string"
+      },
+      "paid_at": {
+        "format": "date-time",
+        "type": "string"
+      },
+      "period_end": {
+        "format": "date-time",
+        "type": "string"
+      },
+      "period_start": {
+        "format": "date-time",
+        "type": "string"
+      },
+      "status": {
+        "type": "string"
+      },
+      "stripe_invoice_id": {
+        "type": "string"
+      },
+      "updated_at": {
+        "format": "date-time",
+        "type": "string"
+      },
+      "workspace_id": {
+        "format": "int64",
+        "type": "integer"
+      }
+    },
+    "required": [
+      "amount_due",
+      "amount_paid",
+      "created_at",
+      "currency",
+      "id",
+      "status",
+      "stripe_invoice_id",
+      "updated_at",
+      "workspace_id"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_billing.Order": {
+    "properties": {
+      "amount": {
+        "format": "double",
+        "type": "number"
+      },
+      "completed_at": {
+        "format": "date-time",
+        "type": "string"
+      },
+      "created_at": {
+        "format": "date-time",
+        "type": "string"
+      },
+      "currency": {
+        "type": "string"
+      },
+      "expires_at": {
+        "format": "date-time",
+        "type": "string"
+      },
+      "failed_at": {
+        "format": "date-time",
+        "type": "string"
+      },
+      "failed_reason": {
+        "type": "string"
+      },
+      "id": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "order_type": {
+        "type": "string"
+      },
+      "out_trade_no": {
+        "type": "string"
+      },
+      "paid_at": {
+        "format": "date-time",
+        "type": "string"
+      },
+      "pay_amount": {
+        "format": "double",
+        "type": "number"
+      },
+      "pay_url": {
+        "type": "string"
+      },
+      "payment_trade_no": {
+        "type": "string"
+      },
+      "payment_type": {
+        "type": "string"
+      },
+      "plan_id": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "provider_snapshot": {
+        "additionalProperties": {},
+        "type": "object"
+      },
+      "receipt_url": {
+        "type": "string"
+      },
+      "recharge_code": {
+        "type": "string"
+      },
+      "source": {
+        "type": "string"
+      },
+      "status": {
+        "type": "string"
+      },
+      "stripe_payment_intent_id": {
+        "type": "string"
+      },
+      "stripe_session_id": {
+        "type": "string"
+      },
+      "updated_at": {
+        "format": "date-time",
+        "type": "string"
+      },
+      "user_id": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "workspace_id": {
+        "format": "int64",
+        "type": "integer"
+      }
+    },
+    "required": [
+      "amount",
+      "created_at",
+      "currency",
+      "expires_at",
+      "id",
+      "order_type",
+      "out_trade_no",
+      "pay_amount",
+      "payment_type",
+      "status",
+      "updated_at",
+      "user_id"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_billing.Overview": {
+    "properties": {
+      "balance": {
+        "format": "double",
+        "type": "number"
+      },
+      "billing_details": {
+        "additionalProperties": {},
+        "type": "object"
+      },
+      "current_month_cost": {
+        "format": "double",
+        "type": "number"
+      },
+      "current_month_requests": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "current_month_tokens": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "monthly_budget_limit": {
+        "format": "double",
+        "type": "number"
+      },
+      "recent_invoices": {
+        "items": {
+          "$ref": "#/definitions/github.com_owlvigil_owlvigil_openapi_internal_modules_billing.Invoice"
+        },
+        "type": "array"
+      },
+      "recent_invoices_page_info": {
+        "$ref": "#/definitions/github.com_owlvigil_owlvigil_openapi_internal_modules_billing.PageInfo"
+      },
+      "workspace_id": {
+        "format": "int64",
+        "type": "integer"
+      }
+    },
+    "required": [
+      "balance",
+      "billing_details",
+      "current_month_cost",
+      "current_month_requests",
+      "current_month_tokens",
+      "recent_invoices",
+      "recent_invoices_page_info",
+      "workspace_id"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_billing.PageInfo": {
+    "properties": {
+      "has_more": {
+        "type": "boolean"
+      },
+      "next_cursor": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "has_more"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_billing.PaymentMethod": {
+    "properties": {
+      "billing_email": {
+        "type": "string"
+      },
+      "brand": {
+        "type": "string"
+      },
+      "created_at": {
+        "format": "date-time",
+        "type": "string"
+      },
+      "expiry_month": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "expiry_year": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "id": {
+        "type": "string"
+      },
+      "is_default": {
+        "type": "boolean"
+      },
+      "last4": {
+        "type": "string"
+      },
+      "type": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "created_at",
+      "id",
+      "is_default",
+      "type"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_billing.Plan": {
+    "properties": {
+      "created_at": {
+        "format": "date-time",
+        "type": "string"
+      },
+      "currency": {
+        "type": "string"
+      },
+      "description": {
+        "type": "string"
+      },
+      "feature_items": {
+        "items": {
+          "type": "string"
+        },
+        "type": "array"
+      },
+      "features": {
+        "type": "string"
+      },
+      "for_sale": {
+        "type": "boolean"
+      },
+      "id": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "is_public": {
+        "type": "boolean"
+      },
+      "max_api_keys": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "max_members": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "max_teams": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "max_workspaces": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "monthly_cost_quota": {
+        "format": "double",
+        "type": "number"
+      },
+      "monthly_request_quota": {
+        "format": "double",
+        "type": "number"
+      },
+      "name": {
+        "type": "string"
+      },
+      "price_monthly": {
+        "format": "double",
+        "type": "number"
+      },
+      "price_yearly": {
+        "format": "double",
+        "type": "number"
+      },
+      "slug": {
+        "type": "string"
+      },
+      "sort_order": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "status": {
+        "type": "string"
+      },
+      "stripe_price_id_monthly": {
+        "type": "string"
+      },
+      "stripe_price_id_yearly": {
+        "type": "string"
+      },
+      "trial_days": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "updated_at": {
+        "format": "date-time",
+        "type": "string"
+      }
+    },
+    "required": [
+      "created_at",
+      "currency",
+      "description",
+      "feature_items",
+      "features",
+      "for_sale",
+      "id",
+      "is_public",
+      "max_api_keys",
+      "max_members",
+      "max_teams",
+      "max_workspaces",
+      "name",
+      "price_monthly",
+      "slug",
+      "sort_order",
+      "status",
+      "trial_days",
+      "updated_at"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_billing.RetryAutoChargeRequest": {
+    "properties": {
+      "workspace_id": {
+        "format": "int64",
+        "type": "integer"
+      }
+    },
+    "required": [
+      "workspace_id"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_billing.SavePaymentMethodRequest": {
+    "properties": {
+      "payment_method_id": {
+        "type": "string"
+      },
+      "set_as_default": {
+        "type": "boolean"
+      }
+    },
+    "required": [
+      "payment_method_id"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_billing.SetupIntent": {
+    "properties": {
+      "client_secret": {
+        "type": "string"
+      },
+      "setup_intent_id": {
+        "type": "string"
+      },
+      "status": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "client_secret",
+      "setup_intent_id",
+      "status"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_billing.SetupIntentRequest": {
+    "properties": {
+      "workspace_id": {
+        "format": "int64",
+        "type": "integer"
+      }
+    },
+    "required": [
+      "workspace_id"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_billing.Subscription": {
+    "properties": {
+      "can_create_more_workspaces": {
+        "type": "boolean"
+      },
+      "current_period_end": {
+        "format": "date-time",
+        "type": "string"
+      },
+      "current_period_start": {
+        "format": "date-time",
+        "type": "string"
+      },
+      "current_workspace_count": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "effective_plan": {
+        "$ref": "#/definitions/github.com_owlvigil_owlvigil_openapi_internal_modules_billing.Plan"
+      },
+      "effective_subscription_plan_id": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "effective_subscription_tier": {
+        "type": "string"
+      },
+      "is_trial_expired": {
+        "type": "boolean"
+      },
+      "max_workspaces": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "pending_plan_effective_at": {
+        "format": "date-time",
+        "type": "string"
+      },
+      "pending_plan_id": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "plan": {
+        "$ref": "#/definitions/github.com_owlvigil_owlvigil_openapi_internal_modules_billing.Plan"
+      },
+      "stripe_customer_id": {
+        "type": "string"
+      },
+      "stripe_schedule_id": {
+        "type": "string"
+      },
+      "stripe_subscription_id": {
+        "type": "string"
+      },
+      "subscription_cancel_at_period_end": {
+        "type": "boolean"
+      },
+      "subscription_plan_id": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "subscription_status": {
+        "type": "string"
+      },
+      "subscription_tier": {
+        "type": "string"
+      },
+      "trial_ends_at": {
+        "format": "date-time",
+        "type": "string"
+      },
+      "user_id": {
+        "format": "int64",
+        "type": "integer"
+      }
+    },
+    "required": [
+      "can_create_more_workspaces",
+      "current_workspace_count",
+      "effective_subscription_tier",
+      "is_trial_expired",
+      "max_workspaces",
+      "subscription_cancel_at_period_end",
+      "subscription_status",
+      "subscription_tier",
+      "user_id"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_billing.SubscriptionCheckout": {
+    "properties": {
+      "checkout_url": {
+        "type": "string"
+      },
+      "expires_at": {
+        "format": "date-time",
+        "type": "string"
+      },
+      "metadata": {
+        "additionalProperties": {},
+        "type": "object"
+      },
+      "order_id": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "session_id": {
+        "type": "string"
+      },
+      "status": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "checkout_url",
+      "expires_at",
+      "session_id",
+      "status"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_billing.SubscriptionCheckoutRequest": {
+    "properties": {
+      "cancel_url": {
+        "type": "string"
+      },
+      "interval": {
+        "type": "string"
+      },
+      "plan_id": {
+        "type": "string"
+      },
+      "success_url": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "cancel_url",
+      "interval",
+      "plan_id",
+      "success_url"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_billing.SubscriptionInApp": {
+    "properties": {
+      "amount": {
+        "format": "double",
+        "type": "number"
+      },
+      "client_secret": {
+        "type": "string"
+      },
+      "currency": {
+        "type": "string"
+      },
+      "payment_intent_id": {
+        "type": "string"
+      },
+      "status": {
+        "type": "string"
+      },
+      "stripe_subscription_id": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "amount",
+      "client_secret",
+      "currency",
+      "payment_intent_id",
+      "status",
+      "stripe_subscription_id"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_billing.SubscriptionInAppRequest": {
+    "properties": {
+      "interval": {
+        "type": "string"
+      },
+      "plan_id": {
+        "type": "string"
+      },
+      "return_url": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "interval",
+      "plan_id",
+      "return_url"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_billing.TopupCheckoutRequest": {
+    "properties": {
+      "amount": {
+        "format": "double",
+        "type": "number"
+      },
+      "cancel_url": {
+        "type": "string"
+      },
+      "success_url": {
+        "type": "string"
+      },
+      "topup_plan_id": {
+        "type": "string"
+      },
+      "workspace_id": {
+        "format": "int64",
+        "type": "integer"
+      }
+    },
+    "required": [
+      "amount",
+      "cancel_url",
+      "success_url",
+      "workspace_id"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_billing.TopupInAppRequest": {
+    "properties": {
+      "amount": {
+        "format": "double",
+        "type": "number"
+      },
+      "return_url": {
+        "type": "string"
+      },
+      "topup_plan_id": {
+        "type": "string"
+      },
+      "workspace_id": {
+        "format": "int64",
+        "type": "integer"
+      }
+    },
+    "required": [
+      "amount",
+      "return_url",
+      "workspace_id"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_billing.TopupPlan": {
+    "properties": {
+      "currency": {
+        "type": "string"
+      },
+      "custom_amount": {
+        "type": "boolean"
+      },
+      "fee_rate": {
+        "format": "double",
+        "type": "number"
+      },
+      "id": {
+        "type": "string"
+      },
+      "max_amount": {
+        "format": "double",
+        "type": "number"
+      },
+      "min_amount": {
+        "format": "double",
+        "type": "number"
+      },
+      "name": {
+        "type": "string"
+      },
+      "payment_channels": {
+        "items": {
+          "type": "string"
+        },
+        "type": "array"
+      }
+    },
+    "required": [
+      "currency",
+      "custom_amount",
+      "fee_rate",
+      "id",
+      "max_amount",
+      "min_amount",
+      "name",
+      "payment_channels"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_billing.UpdateAutoChargeRequest": {
+    "properties": {
+      "charge_amount": {
+        "format": "double",
+        "type": "number"
+      },
+      "enabled": {
+        "type": "boolean"
+      },
+      "transfer_payer": {
+        "type": "boolean"
+      },
+      "workspace_id": {
+        "format": "int64",
+        "type": "integer"
+      }
+    },
+    "required": [
+      "charge_amount",
+      "enabled",
+      "workspace_id"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_billing.UpdateDetailsRequest": {
+    "properties": {
+      "address": {
+        "type": "string"
+      },
+      "billing_details": {
+        "$ref": "#/definitions/github.com_owlvigil_owlvigil_openapi_internal_modules_billing.BillingContact"
+      },
+      "cc_recipients": {
+        "items": {
+          "type": "string"
+        },
+        "type": "array"
+      },
+      "email": {
+        "type": "string"
+      },
+      "name": {
+        "type": "string"
+      },
+      "phone": {
+        "type": "string"
+      },
+      "tax_id": {
+        "type": "string"
+      }
+    },
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_catalog.Model": {
+    "properties": {
+      "created_at": {
+        "format": "date-time",
+        "type": "string"
+      },
+      "developer": {
+        "type": "string"
+      },
+      "group": {
+        "type": "string"
+      },
+      "icon": {
+        "type": "string"
+      },
+      "id": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "model_id": {
+        "type": "string"
+      },
+      "name": {
+        "type": "string"
+      },
+      "route_count": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "status": {
+        "type": "string"
+      },
+      "type": {
+        "type": "string"
+      },
+      "updated_at": {
+        "format": "date-time",
+        "type": "string"
+      }
+    },
+    "required": [
+      "created_at",
+      "developer",
+      "id",
+      "model_id",
+      "name",
+      "route_count",
+      "status",
+      "type",
+      "updated_at"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_catalog.ModelDetail": {
+    "properties": {
+      "created_at": {
+        "format": "date-time",
+        "type": "string"
+      },
+      "developer": {
+        "type": "string"
+      },
+      "group": {
+        "type": "string"
+      },
+      "icon": {
+        "type": "string"
+      },
+      "id": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "model_card": {},
+      "model_id": {
+        "type": "string"
+      },
+      "name": {
+        "type": "string"
+      },
+      "route_count": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "routes": {
+        "items": {
+          "$ref": "#/definitions/github.com_owlvigil_owlvigil_openapi_internal_modules_catalog.RouteCandidate"
+        },
+        "type": "array"
+      },
+      "status": {
+        "type": "string"
+      },
+      "type": {
+        "type": "string"
+      },
+      "updated_at": {
+        "format": "date-time",
+        "type": "string"
+      }
+    },
+    "required": [
+      "created_at",
+      "developer",
+      "id",
+      "model_id",
+      "name",
+      "route_count",
+      "routes",
+      "status",
+      "type",
+      "updated_at"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_catalog.Preview": {
+    "properties": {
+      "candidate_count": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "candidates": {
+        "items": {
+          "$ref": "#/definitions/github.com_owlvigil_owlvigil_openapi_internal_modules_catalog.RouteCandidate"
+        },
+        "type": "array"
+      },
+      "model": {
+        "type": "string"
+      },
+      "preview_metadata": {
+        "additionalProperties": {},
+        "type": "object"
+      },
+      "workspace_id": {
+        "format": "int64",
+        "type": "integer"
+      }
+    },
+    "required": [
+      "candidate_count",
+      "candidates",
+      "model",
+      "workspace_id"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_catalog.PreviewRequest": {
+    "properties": {
+      "key_id": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "metadata": {
+        "additionalProperties": {},
+        "type": "object"
+      },
+      "model": {
+        "minLength": 1,
+        "pattern": ".*\\S.*",
+        "type": "string"
+      },
+      "workspace_id": {
+        "format": "int64",
+        "minimum": 1,
+        "type": "integer"
+      }
+    },
+    "required": [
+      "model",
+      "workspace_id"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_catalog.RouteCandidate": {
+    "properties": {
+      "actual_model": {
+        "type": "string"
+      },
+      "channel_id": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "channel_name": {
+        "type": "string"
+      },
+      "channel_status": {
+        "type": "string"
+      },
+      "channel_type": {
+        "type": "string"
+      },
+      "id": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "match_source": {
+        "type": "string"
+      },
+      "model": {
+        "type": "string"
+      },
+      "price": {},
+      "price_reference_id": {
+        "type": "string"
+      },
+      "provider_platform": {
+        "type": "string"
+      },
+      "provider_source": {
+        "type": "string"
+      },
+      "route_id": {
+        "type": "string"
+      },
+      "workspace_id": {
+        "format": "int64",
+        "type": "integer"
+      }
+    },
+    "required": [
+      "actual_model",
+      "channel_id",
+      "channel_name",
+      "channel_status",
+      "channel_type",
+      "id",
+      "match_source",
+      "model",
+      "provider_source",
+      "route_id",
+      "workspace_id"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_financial.BudgetCap": {
+    "properties": {
+      "api_key_id": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "current_spend": {
+        "format": "double",
+        "type": "number"
+      },
+      "email": {
+        "type": "string"
+      },
+      "enabled": {
+        "type": "boolean"
+      },
+      "monthly_amount": {
+        "format": "double",
+        "type": "number"
+      },
+      "name": {
+        "type": "string"
+      },
+      "scope_id": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "scope_type": {
+        "type": "string"
+      },
+      "team_id": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "user_id": {
+        "format": "int64",
+        "type": "integer"
+      }
+    },
+    "required": [
+      "enabled",
+      "monthly_amount",
+      "scope_type"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_financial.Governance": {
+    "properties": {
+      "currency": {
+        "type": "string"
+      },
+      "exceeded_action": {
+        "type": "string"
+      },
+      "gateway_key_caps": {
+        "items": {
+          "$ref": "#/definitions/github.com_owlvigil_owlvigil_openapi_internal_modules_financial.BudgetCap"
+        },
+        "type": "array"
+      },
+      "member_caps": {
+        "items": {
+          "$ref": "#/definitions/github.com_owlvigil_owlvigil_openapi_internal_modules_financial.BudgetCap"
+        },
+        "type": "array"
+      },
+      "member_limits": {
+        "items": {
+          "$ref": "#/definitions/github.com_owlvigil_owlvigil_openapi_internal_modules_financial.MemberSpendingLimit"
+        },
+        "type": "array"
+      },
+      "notification_channels": {
+        "items": {
+          "type": "string"
+        },
+        "type": "array"
+      },
+      "team_caps": {
+        "items": {
+          "$ref": "#/definitions/github.com_owlvigil_owlvigil_openapi_internal_modules_financial.BudgetCap"
+        },
+        "type": "array"
+      },
+      "thresholds": {
+        "$ref": "#/definitions/github.com_owlvigil_owlvigil_openapi_internal_modules_financial.Thresholds"
+      },
+      "usage_multiplier": {
+        "format": "double",
+        "type": "number"
+      },
+      "workspace_cap": {
+        "$ref": "#/definitions/github.com_owlvigil_owlvigil_openapi_internal_modules_financial.BudgetCap"
+      },
+      "workspace_id": {
+        "format": "int64",
+        "type": "integer"
+      }
+    },
+    "required": [
+      "currency",
+      "exceeded_action",
+      "gateway_key_caps",
+      "member_caps",
+      "member_limits",
+      "notification_channels",
+      "team_caps",
+      "thresholds",
+      "usage_multiplier",
+      "workspace_cap",
+      "workspace_id"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_financial.MemberSpendingLimit": {
+    "properties": {
+      "daily_limit": {
+        "format": "double",
+        "type": "number"
+      },
+      "daily_spend": {
+        "format": "double",
+        "type": "number"
+      },
+      "email": {
+        "type": "string"
+      },
+      "monthly_limit": {
+        "format": "double",
+        "type": "number"
+      },
+      "monthly_spend": {
+        "format": "double",
+        "type": "number"
+      },
+      "name": {
+        "type": "string"
+      },
+      "user_id": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "weekly_limit": {
+        "format": "double",
+        "type": "number"
+      },
+      "weekly_spend": {
+        "format": "double",
+        "type": "number"
+      }
+    },
+    "required": [
+      "user_id"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_financial.Preview": {
+    "properties": {
+      "affected_gateway_keys": {
+        "items": {
+          "format": "int64",
+          "type": "integer"
+        },
+        "type": "array"
+      },
+      "affected_members": {
+        "items": {
+          "format": "int64",
+          "type": "integer"
+        },
+        "type": "array"
+      },
+      "affected_teams": {
+        "items": {
+          "format": "int64",
+          "type": "integer"
+        },
+        "type": "array"
+      },
+      "valid": {
+        "type": "boolean"
+      },
+      "violations": {
+        "items": {
+          "type": "string"
+        },
+        "type": "array"
+      }
+    },
+    "required": [
+      "valid"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_financial.PreviewRequest": {
+    "properties": {
+      "gateway_key_caps": {
+        "items": {
+          "$ref": "#/definitions/github.com_owlvigil_owlvigil_openapi_internal_modules_financial.BudgetCap"
+        },
+        "type": "array"
+      },
+      "member_caps": {
+        "items": {
+          "$ref": "#/definitions/github.com_owlvigil_owlvigil_openapi_internal_modules_financial.BudgetCap"
+        },
+        "type": "array"
+      },
+      "team_caps": {
+        "items": {
+          "$ref": "#/definitions/github.com_owlvigil_owlvigil_openapi_internal_modules_financial.BudgetCap"
+        },
+        "type": "array"
+      },
+      "workspace_cap": {
+        "$ref": "#/definitions/github.com_owlvigil_owlvigil_openapi_internal_modules_financial.BudgetCap"
+      }
+    },
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_financial.SpendDetail": {
+    "properties": {
+      "limit": {
+        "format": "double",
+        "type": "number"
+      },
+      "name": {
+        "type": "string"
+      },
+      "percent": {
+        "format": "double",
+        "type": "number"
+      },
+      "scope_id": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "scope_type": {
+        "type": "string"
+      },
+      "spend": {
+        "format": "double",
+        "type": "number"
+      },
+      "status": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "scope_type",
+      "spend",
+      "status"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_financial.SpendSummary": {
+    "properties": {
+      "current_period": {
+        "type": "string"
+      },
+      "gateway_key_spends": {
+        "items": {
+          "$ref": "#/definitions/github.com_owlvigil_owlvigil_openapi_internal_modules_financial.SpendDetail"
+        },
+        "type": "array"
+      },
+      "member_spends": {
+        "items": {
+          "$ref": "#/definitions/github.com_owlvigil_owlvigil_openapi_internal_modules_financial.SpendDetail"
+        },
+        "type": "array"
+      },
+      "team_spends": {
+        "items": {
+          "$ref": "#/definitions/github.com_owlvigil_owlvigil_openapi_internal_modules_financial.SpendDetail"
+        },
+        "type": "array"
+      },
+      "workspace_id": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "workspace_spend": {
+        "$ref": "#/definitions/github.com_owlvigil_owlvigil_openapi_internal_modules_financial.SpendDetail"
+      }
+    },
+    "required": [
+      "current_period",
+      "workspace_id",
+      "workspace_spend"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_financial.Thresholds": {
+    "properties": {
+      "critical_percent": {
+        "format": "double",
+        "type": "number"
+      },
+      "exceeded_action": {
+        "type": "string"
+      },
+      "warning_percent": {
+        "format": "double",
+        "type": "number"
+      }
+    },
+    "required": [
+      "critical_percent",
+      "exceeded_action",
+      "warning_percent"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_financial.UpdateBudgetCapsRequest": {
+    "properties": {
+      "gateway_key_caps": {
+        "items": {
+          "$ref": "#/definitions/github.com_owlvigil_owlvigil_openapi_internal_modules_financial.BudgetCap"
+        },
+        "type": "array"
+      },
+      "member_caps": {
+        "items": {
+          "$ref": "#/definitions/github.com_owlvigil_owlvigil_openapi_internal_modules_financial.BudgetCap"
+        },
+        "type": "array"
+      },
+      "team_caps": {
+        "items": {
+          "$ref": "#/definitions/github.com_owlvigil_owlvigil_openapi_internal_modules_financial.BudgetCap"
+        },
+        "type": "array"
+      },
+      "workspace_cap": {
+        "$ref": "#/definitions/github.com_owlvigil_owlvigil_openapi_internal_modules_financial.BudgetCap"
+      }
+    },
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_financial.UpdateGovernanceRequest": {
+    "properties": {
+      "exceeded_action": {
+        "type": "string"
+      },
+      "gateway_key_caps": {
+        "items": {
+          "$ref": "#/definitions/github.com_owlvigil_owlvigil_openapi_internal_modules_financial.BudgetCap"
+        },
+        "type": "array"
+      },
+      "member_caps": {
+        "items": {
+          "$ref": "#/definitions/github.com_owlvigil_owlvigil_openapi_internal_modules_financial.BudgetCap"
+        },
+        "type": "array"
+      },
+      "member_limits": {
+        "items": {
+          "$ref": "#/definitions/github.com_owlvigil_owlvigil_openapi_internal_modules_financial.MemberSpendingLimit"
+        },
+        "type": "array"
+      },
+      "team_caps": {
+        "items": {
+          "$ref": "#/definitions/github.com_owlvigil_owlvigil_openapi_internal_modules_financial.BudgetCap"
+        },
+        "type": "array"
+      },
+      "thresholds": {
+        "$ref": "#/definitions/github.com_owlvigil_owlvigil_openapi_internal_modules_financial.Thresholds"
+      },
+      "usage_multiplier": {
+        "format": "double",
+        "maximum": 100,
+        "minimum": 0.01,
+        "type": "number"
+      },
+      "workspace_cap": {
+        "$ref": "#/definitions/github.com_owlvigil_owlvigil_openapi_internal_modules_financial.BudgetCap"
+      }
+    },
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_financial.UpdateScopeBudgetCapRequest": {
+    "properties": {
+      "enabled": {
+        "type": "boolean"
+      },
+      "monthly_amount": {
+        "format": "double",
+        "type": "number"
+      }
+    },
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_financial.UpdateSpendingLimitsRequest": {
+    "properties": {
+      "limits": {
+        "items": {
+          "$ref": "#/definitions/github.com_owlvigil_owlvigil_openapi_internal_modules_financial.MemberSpendingLimit"
+        },
+        "type": "array"
+      }
+    },
+    "required": [
+      "limits"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_financial.UpdateThresholdsRequest": {
+    "properties": {
+      "critical_percent": {
+        "format": "double",
+        "type": "number"
+      },
+      "exceeded_action": {
+        "type": "string"
+      },
+      "warning_percent": {
+        "format": "double",
+        "type": "number"
+      }
+    },
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_financial.UpdateUserSpendingLimitRequest": {
+    "properties": {
+      "daily_limit": {
+        "format": "double",
+        "type": "number"
+      },
+      "monthly_limit": {
+        "format": "double",
+        "type": "number"
+      },
+      "weekly_limit": {
+        "format": "double",
+        "type": "number"
+      }
+    },
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_gatewaykey.CreateRequest": {
+    "properties": {
+      "assignee_user_id": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "budget_limit": {
+        "format": "double",
+        "minimum": 0,
+        "type": "number"
+      },
+      "name": {
+        "minLength": 1,
+        "pattern": ".*\\S.*",
+        "type": "string"
+      },
+      "provider_platform": {
+        "type": "string"
+      },
+      "provider_source": {
+        "type": "string"
+      },
+      "rate_limit_rpm": {
+        "format": "int64",
+        "minimum": 0,
+        "type": "integer"
+      },
+      "team_id": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "usage_multiplier": {
+        "format": "double",
+        "maximum": 100,
+        "minimum": 0.01,
+        "type": "number"
+      },
+      "workspace_id": {
+        "format": "int64",
+        "minimum": 1,
+        "type": "integer"
+      }
+    },
+    "required": [
+      "name",
+      "workspace_id"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_gatewaykey.DTO": {
+    "properties": {
+      "assignee_user_id": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "created_at": {
+        "format": "date-time",
+        "type": "string"
+      },
+      "id": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "key": {
+        "type": "string"
+      },
+      "masked_key": {
+        "type": "string"
+      },
+      "name": {
+        "type": "string"
+      },
+      "provider_platform": {
+        "type": "string"
+      },
+      "provider_source": {
+        "type": "string"
+      },
+      "rate_limit_rpm": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "status": {
+        "type": "string"
+      },
+      "team_id": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "updated_at": {
+        "format": "date-time",
+        "type": "string"
+      },
+      "usage_multiplier": {
+        "format": "double",
+        "type": "number"
+      },
+      "workspace_id": {
+        "format": "int64",
+        "type": "integer"
+      }
+    },
+    "required": [
+      "created_at",
+      "id",
+      "masked_key",
+      "name",
+      "provider_source",
+      "status",
+      "updated_at",
+      "usage_multiplier",
+      "workspace_id"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_gatewaykey.UpdateRequest": {
+    "properties": {
+      "assignee_user_id": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "budget_limit": {
+        "format": "double",
+        "minimum": 0,
+        "type": "number"
+      },
+      "clear_assignee_user_id": {
+        "type": "boolean"
+      },
+      "clear_team_id": {
+        "type": "boolean"
+      },
+      "name": {
+        "type": "string"
+      },
+      "provider_platform": {
+        "type": "string"
+      },
+      "provider_source": {
+        "type": "string"
+      },
+      "rate_limit_rpm": {
+        "format": "int64",
+        "minimum": 0,
+        "type": "integer"
+      },
+      "team_id": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "usage_multiplier": {
+        "format": "double",
+        "maximum": 100,
+        "minimum": 0.01,
+        "type": "number"
+      }
+    },
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_logs.AuditLog": {
+    "properties": {
+      "action": {
+        "type": "string"
+      },
+      "actor_label": {
+        "type": "string"
+      },
+      "after_state": {
+        "additionalProperties": {},
+        "type": "object"
+      },
+      "before_after_summary": {
+        "type": "string"
+      },
+      "before_state": {
+        "additionalProperties": {},
+        "type": "object"
+      },
+      "created_at": {
+        "format": "date-time",
+        "type": "string"
+      },
+      "error_message": {
+        "type": "string"
+      },
+      "id": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "ip_address": {
+        "type": "string"
+      },
+      "metadata": {
+        "additionalProperties": {},
+        "type": "object"
+      },
+      "resource_id": {
+        "type": "string"
+      },
+      "resource_name": {
+        "type": "string"
+      },
+      "resource_type": {
+        "type": "string"
+      },
+      "status": {
+        "type": "string"
+      },
+      "target_label": {
+        "type": "string"
+      },
+      "user_agent": {
+        "type": "string"
+      },
+      "user_email": {
+        "type": "string"
+      },
+      "user_id": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "user_name": {
+        "type": "string"
+      },
+      "workspace_id": {
+        "format": "int64",
+        "type": "integer"
+      }
+    },
+    "required": [
+      "action",
+      "actor_label",
+      "before_after_summary",
+      "created_at",
+      "id",
+      "resource_id",
+      "resource_type",
+      "status",
+      "target_label",
+      "user_id",
+      "workspace_id"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_logs.LogDataQuota": {
+    "properties": {
+      "cleanup_recommended": {
+        "type": "boolean"
+      },
+      "deleted_bytes": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "deleted_objects": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "last_calculated_at": {
+        "format": "date-time",
+        "type": "string"
+      },
+      "last_error": {
+        "type": "string"
+      },
+      "limit_bytes": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "over_limit": {
+        "type": "boolean"
+      },
+      "usage_percent": {
+        "format": "double",
+        "type": "number"
+      },
+      "used_bytes": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "warning": {
+        "type": "boolean"
+      }
+    },
+    "required": [
+      "cleanup_recommended",
+      "last_calculated_at",
+      "limit_bytes",
+      "over_limit",
+      "usage_percent",
+      "used_bytes",
+      "warning"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_logs.LoggingSettings": {
+    "properties": {
+      "capture_headers": {
+        "type": "boolean"
+      },
+      "capture_request_body": {
+        "type": "boolean"
+      },
+      "capture_response_body": {
+        "type": "boolean"
+      },
+      "capture_stream_chunks": {
+        "type": "boolean"
+      },
+      "enabled": {
+        "type": "boolean"
+      },
+      "log_data_quota": {
+        "$ref": "#/definitions/github.com_owlvigil_owlvigil_openapi_internal_modules_logs.LogDataQuota"
+      },
+      "mask_sensitive_headers": {
+        "type": "boolean"
+      },
+      "max_body_size": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "redact_headers": {
+        "items": {
+          "type": "string"
+        },
+        "type": "array"
+      },
+      "retention_days": {
+        "format": "int64",
+        "type": "integer"
+      }
+    },
+    "required": [
+      "capture_headers",
+      "capture_request_body",
+      "capture_response_body",
+      "capture_stream_chunks",
+      "enabled",
+      "mask_sensitive_headers",
+      "max_body_size",
+      "redact_headers",
+      "retention_days"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_logs.Payload": {
+    "properties": {
+      "api_key_id": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "channel_id": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "client_ip": {
+        "type": "string"
+      },
+      "created_at": {
+        "format": "date-time",
+        "type": "string"
+      },
+      "duration_ms": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "executions": {
+        "items": {
+          "$ref": "#/definitions/github.com_owlvigil_owlvigil_openapi_internal_modules_logs.PayloadExecution"
+        },
+        "type": "array"
+      },
+      "external_id": {
+        "type": "string"
+      },
+      "first_token_ms": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "format": {
+        "type": "string"
+      },
+      "id": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "model": {
+        "type": "string"
+      },
+      "reasoning_duration_ms": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "request_body": {},
+      "request_id": {
+        "type": "string"
+      },
+      "response_body": {},
+      "response_chunks": {},
+      "status": {
+        "type": "string"
+      },
+      "stream": {
+        "type": "boolean"
+      },
+      "trace_id": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "trace_key": {
+        "type": "string"
+      },
+      "updated_at": {
+        "format": "date-time",
+        "type": "string"
+      },
+      "workspace_id": {
+        "format": "int64",
+        "type": "integer"
+      }
+    },
+    "required": [
+      "created_at",
+      "format",
+      "id",
+      "model",
+      "request_id",
+      "status",
+      "stream",
+      "updated_at",
+      "workspace_id"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_logs.PayloadAccess": {
+    "properties": {
+      "capture_request_body": {
+        "type": "boolean"
+      },
+      "capture_response_body": {
+        "type": "boolean"
+      },
+      "capture_stream_chunks": {
+        "type": "boolean"
+      },
+      "enabled": {
+        "type": "boolean"
+      },
+      "message": {
+        "type": "string"
+      },
+      "request_disabled_message": {
+        "type": "string"
+      },
+      "response_disabled_message": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "capture_request_body",
+      "capture_response_body",
+      "capture_stream_chunks",
+      "enabled"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_logs.PayloadExecution": {
+    "properties": {
+      "channel_id": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "created_at": {
+        "format": "date-time",
+        "type": "string"
+      },
+      "error_message": {
+        "type": "string"
+      },
+      "external_id": {
+        "type": "string"
+      },
+      "format": {
+        "type": "string"
+      },
+      "id": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "model": {
+        "type": "string"
+      },
+      "request_body": {},
+      "response_body": {},
+      "response_chunks": {},
+      "status": {
+        "type": "string"
+      },
+      "status_code": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "stream": {
+        "type": "boolean"
+      },
+      "updated_at": {
+        "format": "date-time",
+        "type": "string"
+      }
+    },
+    "required": [
+      "created_at",
+      "format",
+      "id",
+      "model",
+      "status",
+      "stream",
+      "updated_at"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_logs.PayloadSummary": {
+    "properties": {
+      "created_at": {
+        "format": "date-time",
+        "type": "string"
+      },
+      "format": {
+        "type": "string"
+      },
+      "id": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "model": {
+        "type": "string"
+      },
+      "request_id": {
+        "type": "string"
+      },
+      "status": {
+        "type": "string"
+      },
+      "stream": {
+        "type": "boolean"
+      },
+      "trace_id": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "trace_key": {
+        "type": "string"
+      },
+      "workspace_id": {
+        "format": "int64",
+        "type": "integer"
+      }
+    },
+    "required": [
+      "created_at",
+      "format",
+      "id",
+      "model",
+      "request_id",
+      "status",
+      "stream",
+      "workspace_id"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_logs.UpdateLoggingSettingsRequest": {
+    "properties": {
+      "capture_headers": {
+        "type": "boolean"
+      },
+      "capture_request_body": {
+        "type": "boolean"
+      },
+      "capture_response_body": {
+        "type": "boolean"
+      },
+      "capture_stream_chunks": {
+        "type": "boolean"
+      },
+      "enabled": {
+        "type": "boolean"
+      },
+      "mask_sensitive_headers": {
+        "type": "boolean"
+      },
+      "max_body_size": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "redact_headers": {
+        "items": {
+          "type": "string"
+        },
+        "type": "array"
+      },
+      "retention_days": {
+        "format": "int64",
+        "type": "integer"
+      }
+    },
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_observability.RequestLog": {
+    "properties": {
+      "created_at": {
+        "format": "date-time",
+        "type": "string"
+      },
+      "format": {
+        "type": "string"
+      },
+      "gateway_key_id": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "id": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "input_tokens": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "key_name": {
+        "type": "string"
+      },
+      "latency_ms": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "member_name": {
+        "type": "string"
+      },
+      "model": {
+        "type": "string"
+      },
+      "output_tokens": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "provider": {
+        "type": "string"
+      },
+      "provider_id": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "provider_source": {
+        "type": "string"
+      },
+      "request_id": {
+        "type": "string"
+      },
+      "status": {
+        "type": "string"
+      },
+      "status_code": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "stream": {
+        "type": "boolean"
+      },
+      "team_id": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "team_name": {
+        "type": "string"
+      },
+      "total_cost": {
+        "format": "double",
+        "type": "number"
+      },
+      "total_tokens": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "trace_id": {
+        "type": "string"
+      },
+      "user_id": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "workspace_id": {
+        "format": "int64",
+        "type": "integer"
+      }
+    },
+    "required": [
+      "created_at",
+      "gateway_key_id",
+      "id",
+      "input_tokens",
+      "key_name",
+      "latency_ms",
+      "member_name",
+      "model",
+      "output_tokens",
+      "provider",
+      "provider_id",
+      "provider_source",
+      "request_id",
+      "status",
+      "status_code",
+      "stream",
+      "team_id",
+      "team_name",
+      "total_cost",
+      "total_tokens",
+      "trace_id",
+      "user_id",
+      "workspace_id"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_observability.Trace": {
+    "properties": {
+      "created_at": {
+        "format": "date-time",
+        "type": "string"
+      },
+      "id": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "thread_id": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "trace_id": {
+        "type": "string"
+      },
+      "updated_at": {
+        "format": "date-time",
+        "type": "string"
+      },
+      "workspace_id": {
+        "format": "int64",
+        "type": "integer"
+      }
+    },
+    "required": [
+      "created_at",
+      "id",
+      "trace_id",
+      "updated_at",
+      "workspace_id"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_policy.AddKeywordRequest": {
+    "properties": {
+      "description": {
+        "type": "string"
+      },
+      "enabled": {
+        "type": "boolean"
+      },
+      "keyword": {
+        "minLength": 1,
+        "pattern": ".*\\S.*",
+        "type": "string"
+      },
+      "workspace_id": {
+        "format": "int64",
+        "minimum": 1,
+        "type": "integer"
+      }
+    },
+    "required": [
+      "keyword",
+      "workspace_id"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_policy.BudgetPolicy": {
+    "properties": {
+      "current_spend": {
+        "format": "double",
+        "type": "number"
+      },
+      "enforcement_mode": {
+        "type": "string"
+      },
+      "id": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "monthly_limit": {
+        "format": "double",
+        "type": "number"
+      },
+      "scope": {
+        "type": "string"
+      },
+      "scope_id": {
+        "format": "int64",
+        "type": "integer"
+      }
+    },
+    "required": [
+      "current_spend",
+      "enforcement_mode",
+      "id",
+      "monthly_limit",
+      "scope",
+      "scope_id"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_policy.DTO": {
+    "properties": {
+      "budget_policies": {
+        "items": {
+          "$ref": "#/definitions/github.com_owlvigil_owlvigil_openapi_internal_modules_policy.BudgetPolicy"
+        },
+        "type": "array"
+      },
+      "key_id": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "keyword_policies": {
+        "items": {
+          "$ref": "#/definitions/github.com_owlvigil_owlvigil_openapi_internal_modules_policy.KeywordPolicy"
+        },
+        "type": "array"
+      },
+      "log_policies": {
+        "items": {
+          "$ref": "#/definitions/github.com_owlvigil_owlvigil_openapi_internal_modules_policy.LogPolicy"
+        },
+        "type": "array"
+      },
+      "model_policies": {
+        "items": {
+          "$ref": "#/definitions/github.com_owlvigil_owlvigil_openapi_internal_modules_policy.ModelPolicy"
+        },
+        "type": "array"
+      },
+      "rate_limits": {
+        "items": {
+          "$ref": "#/definitions/github.com_owlvigil_owlvigil_openapi_internal_modules_policy.RateLimit"
+        },
+        "type": "array"
+      },
+      "warnings": {
+        "items": {
+          "type": "string"
+        },
+        "type": "array"
+      },
+      "workspace_id": {
+        "format": "int64",
+        "type": "integer"
+      }
+    },
+    "required": [
+      "budget_policies",
+      "keyword_policies",
+      "log_policies",
+      "model_policies",
+      "rate_limits",
+      "workspace_id"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_policy.KeywordPolicy": {
+    "properties": {
+      "action": {
+        "type": "string"
+      },
+      "description": {
+        "type": "string"
+      },
+      "enabled": {
+        "type": "boolean"
+      },
+      "id": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "keyword": {
+        "type": "string"
+      },
+      "scope": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "action",
+      "enabled",
+      "id",
+      "keyword",
+      "scope"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_policy.LogPolicy": {
+    "properties": {
+      "capture_request": {
+        "type": "boolean"
+      },
+      "capture_response": {
+        "type": "boolean"
+      },
+      "id": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "retention_days": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "scope": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "capture_request",
+      "capture_response",
+      "id",
+      "retention_days",
+      "scope"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_policy.ModelPolicy": {
+    "properties": {
+      "action": {
+        "type": "string"
+      },
+      "applies_to": {
+        "items": {
+          "type": "string"
+        },
+        "type": "array"
+      },
+      "id": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "model_id": {
+        "type": "string"
+      },
+      "priority": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "provider": {
+        "type": "string"
+      },
+      "reason": {
+        "type": "string"
+      },
+      "redirect_to": {
+        "type": "string"
+      },
+      "scope": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "action",
+      "id",
+      "model_id",
+      "priority",
+      "provider",
+      "scope"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_policy.Preview": {
+    "properties": {
+      "allowed": {
+        "type": "boolean"
+      },
+      "blocked_by": {
+        "items": {
+          "type": "string"
+        },
+        "type": "array"
+      },
+      "budget_check": {
+        "type": "string"
+      },
+      "modified_by": {
+        "items": {
+          "type": "string"
+        },
+        "type": "array"
+      },
+      "rate_limit_check": {
+        "type": "string"
+      },
+      "redirected_to": {
+        "type": "string"
+      },
+      "warnings": {
+        "items": {
+          "type": "string"
+        },
+        "type": "array"
+      }
+    },
+    "required": [
+      "allowed",
+      "blocked_by",
+      "budget_check",
+      "modified_by",
+      "rate_limit_check",
+      "warnings"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_policy.PreviewRequest": {
+    "properties": {
+      "key_id": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "model": {
+        "minLength": 1,
+        "pattern": ".*\\S.*",
+        "type": "string"
+      },
+      "request": {
+        "additionalProperties": {},
+        "type": "object"
+      },
+      "workspace_id": {
+        "format": "int64",
+        "minimum": 1,
+        "type": "integer"
+      }
+    },
+    "required": [
+      "model",
+      "workspace_id"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_policy.RateLimit": {
+    "properties": {
+      "enforcement_mode": {
+        "type": "string"
+      },
+      "id": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "requests_per_min": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "scope": {
+        "type": "string"
+      },
+      "tokens_per_min": {
+        "format": "int64",
+        "type": "integer"
+      }
+    },
+    "required": [
+      "enforcement_mode",
+      "id",
+      "scope"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_policy.UpdateRequest": {
+    "properties": {
+      "action": {
+        "type": "string"
+      },
+      "enabled": {
+        "type": "boolean"
+      },
+      "priority": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "redirect_to": {
+        "type": "string"
+      }
+    },
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_provider.CreateRequest": {
+    "properties": {
+      "api_key": {
+        "minLength": 1,
+        "pattern": ".*\\S.*",
+        "type": "string"
+      },
+      "api_mode": {
+        "type": "string"
+      },
+      "base_url": {
+        "type": "string"
+      },
+      "default_model": {
+        "type": "string"
+      },
+      "name": {
+        "minLength": 1,
+        "pattern": ".*\\S.*",
+        "type": "string"
+      },
+      "type": {
+        "minLength": 1,
+        "pattern": ".*\\S.*",
+        "type": "string"
+      },
+      "workspace_id": {
+        "format": "int64",
+        "minimum": 1,
+        "type": "integer"
+      }
+    },
+    "required": [
+      "api_key",
+      "name",
+      "type",
+      "workspace_id"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_provider.DTO": {
+    "properties": {
+      "api_mode": {
+        "type": "string"
+      },
+      "base_url": {
+        "type": "string"
+      },
+      "created_at": {
+        "format": "date-time",
+        "type": "string"
+      },
+      "default_model": {
+        "type": "string"
+      },
+      "error_count": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "id": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "is_platform_managed": {
+        "type": "boolean"
+      },
+      "last_used_at": {
+        "format": "date-time",
+        "type": "string"
+      },
+      "name": {
+        "type": "string"
+      },
+      "provider_platform": {
+        "type": "string"
+      },
+      "provider_source": {
+        "type": "string"
+      },
+      "request_count": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "status": {
+        "type": "string"
+      },
+      "type": {
+        "type": "string"
+      },
+      "updated_at": {
+        "format": "date-time",
+        "type": "string"
+      },
+      "workspace_id": {
+        "format": "int64",
+        "type": "integer"
+      }
+    },
+    "required": [
+      "api_mode",
+      "base_url",
+      "created_at",
+      "default_model",
+      "error_count",
+      "id",
+      "name",
+      "provider_source",
+      "request_count",
+      "status",
+      "type",
+      "updated_at",
+      "workspace_id"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_provider.UpdateRequest": {
+    "properties": {
+      "api_key": {
+        "type": "string"
+      },
+      "api_mode": {
+        "type": "string"
+      },
+      "base_url": {
+        "type": "string"
+      },
+      "default_model": {
+        "type": "string"
+      },
+      "name": {
+        "type": "string"
+      },
+      "status": {
+        "type": "string"
+      },
+      "workspace_id": {
+        "description": "Must match the workspace_id query parameter",
+        "format": "int64",
+        "minimum": 1,
+        "type": "integer"
+      }
+    },
+    "required": [
+      "workspace_id"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_provider.Verification": {
+    "properties": {
+      "latency_ms": {
+        "format": "double",
+        "type": "number"
+      },
+      "message": {
+        "type": "string"
+      },
+      "success": {
+        "type": "boolean"
+      }
+    },
+    "required": [
+      "message",
+      "success"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_provider.VerifyRequest": {
+    "properties": {
+      "api_key": {
+        "description": "Required when provider_id is omitted",
+        "type": "string"
+      },
+      "api_mode": {
+        "type": "string"
+      },
+      "base_url": {
+        "type": "string"
+      },
+      "default_model": {
+        "type": "string"
+      },
+      "provider_id": {
+        "description": "Use a positive saved provider ID or -1; when omitted type and api_key are required",
+        "format": "int64",
+        "type": "integer"
+      },
+      "type": {
+        "description": "Required when provider_id is omitted",
+        "type": "string"
+      },
+      "workspace_id": {
+        "format": "int64",
+        "minimum": 1,
+        "type": "integer"
+      }
+    },
+    "required": [
+      "workspace_id"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_usage.Quota": {
+    "properties": {
+      "limit": {
+        "format": "double",
+        "type": "number"
+      },
+      "remaining": {
+        "format": "double",
+        "type": "number"
+      },
+      "used": {
+        "format": "double",
+        "type": "number"
+      }
+    },
+    "required": [
+      "limit",
+      "remaining",
+      "used"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_usage.Record": {
+    "properties": {
+      "cost": {
+        "format": "double",
+        "type": "number"
+      },
+      "id": {
+        "type": "string"
+      },
+      "model": {
+        "type": "string"
+      },
+      "provider": {
+        "type": "string"
+      },
+      "requests": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "timestamp": {
+        "type": "string"
+      },
+      "tokens": {
+        "format": "int64",
+        "type": "integer"
+      }
+    },
+    "required": [
+      "cost",
+      "id",
+      "model",
+      "requests",
+      "timestamp",
+      "tokens"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_usage.Summary": {
+    "properties": {
+      "cost": {
+        "format": "double",
+        "type": "number"
+      },
+      "requests": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "tokens": {
+        "format": "int64",
+        "type": "integer"
+      }
+    },
+    "required": [
+      "cost",
+      "requests",
+      "tokens"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_webhook.BulkRedeliverRequest": {
+    "properties": {
+      "endpoint_id": {
+        "format": "int64",
+        "minimum": 1,
+        "type": "integer"
+      },
+      "event_ids": {
+        "items": {
+          "format": "int64",
+          "minimum": 1,
+          "type": "integer"
+        },
+        "type": "array"
+      },
+      "event_type": {
+        "type": "string"
+      },
+      "limit": {
+        "format": "int64",
+        "maximum": 100,
+        "minimum": 0,
+        "type": "integer"
+      },
+      "workspace_id": {
+        "format": "int64",
+        "minimum": 1,
+        "type": "integer"
+      }
+    },
+    "required": [
+      "workspace_id"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_webhook.CreateEndpointRequest": {
+    "properties": {
+      "event_types": {
+        "items": {
+          "enum": [
+            "billing.payment_failed",
+            "billing.invoice_available",
+            "quota.threshold_reached",
+            "workspace.member_added",
+            "gateway.key.created",
+            "gateway.key.updated"
+          ],
+          "type": "string"
+        },
+        "minItems": 1,
+        "type": "array"
+      },
+      "url": {
+        "format": "uri",
+        "maxLength": 2048,
+        "minLength": 1,
+        "pattern": "^https://[^@/\\s]+",
+        "type": "string"
+      },
+      "workspace_id": {
+        "format": "int64",
+        "minimum": 1,
+        "type": "integer"
+      }
+    },
+    "required": [
+      "event_types",
+      "url",
+      "workspace_id"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_webhook.Endpoint": {
+    "properties": {
+      "created_at": {
+        "format": "date-time",
+        "type": "string"
+      },
+      "event_types": {
+        "items": {
+          "type": "string"
+        },
+        "type": "array"
+      },
+      "id": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "secret": {
+        "type": "string"
+      },
+      "status": {
+        "type": "string"
+      },
+      "updated_at": {
+        "format": "date-time",
+        "type": "string"
+      },
+      "url": {
+        "type": "string"
+      },
+      "workspace_id": {
+        "format": "int64",
+        "type": "integer"
+      }
+    },
+    "required": [
+      "created_at",
+      "event_types",
+      "id",
+      "status",
+      "updated_at",
+      "url",
+      "workspace_id"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_webhook.Event": {
+    "properties": {
+      "attempts": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "created_at": {
+        "format": "date-time",
+        "type": "string"
+      },
+      "delivered_at": {
+        "format": "date-time",
+        "type": "string"
+      },
+      "endpoint_id": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "event_type": {
+        "type": "string"
+      },
+      "id": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "last_error": {
+        "type": "string"
+      },
+      "payload": {
+        "additionalProperties": {},
+        "type": "object"
+      },
+      "status": {
+        "type": "string"
+      },
+      "updated_at": {
+        "format": "date-time",
+        "type": "string"
+      },
+      "workspace_id": {
+        "format": "int64",
+        "type": "integer"
+      }
+    },
+    "required": [
+      "attempts",
+      "created_at",
+      "endpoint_id",
+      "event_type",
+      "id",
+      "payload",
+      "status",
+      "updated_at",
+      "workspace_id"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_webhook.EventType": {
+    "properties": {
+      "description": {
+        "type": "string"
+      },
+      "type": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "description",
+      "type"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_webhook.UpdateEndpointRequest": {
+    "properties": {
+      "event_types": {
+        "items": {
+          "enum": [
+            "billing.payment_failed",
+            "billing.invoice_available",
+            "quota.threshold_reached",
+            "workspace.member_added",
+            "gateway.key.created",
+            "gateway.key.updated"
+          ],
+          "type": "string"
+        },
+        "minItems": 1,
+        "type": "array"
+      },
+      "status": {
+        "enum": [
+          "enabled",
+          "disabled"
+        ],
+        "type": "string"
+      },
+      "url": {
+        "format": "uri",
+        "maxLength": 2048,
+        "minLength": 1,
+        "pattern": "^https://[^@/\\s]+",
+        "type": "string"
+      }
+    },
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_workspace.Activity": {
+    "properties": {
+      "created_at": {
+        "format": "date-time",
+        "type": "string"
+      },
+      "id": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "ip": {
+        "type": "string"
+      },
+      "meta": {
+        "type": "string"
+      },
+      "tab": {
+        "type": "string"
+      },
+      "what": {
+        "type": "string"
+      },
+      "who": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "created_at",
+      "id",
+      "meta",
+      "tab",
+      "what",
+      "who"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_workspace.Breakdown": {
+    "properties": {
+      "by_member": {
+        "items": {
+          "$ref": "#/definitions/github.com_owlvigil_owlvigil_openapi_internal_modules_workspace.BreakdownRow"
+        },
+        "type": "array"
+      },
+      "by_provider": {
+        "items": {
+          "$ref": "#/definitions/github.com_owlvigil_owlvigil_openapi_internal_modules_workspace.BreakdownRow"
+        },
+        "type": "array"
+      },
+      "by_team": {
+        "items": {
+          "$ref": "#/definitions/github.com_owlvigil_owlvigil_openapi_internal_modules_workspace.BreakdownRow"
+        },
+        "type": "array"
+      }
+    },
+    "required": [
+      "by_member",
+      "by_provider",
+      "by_team"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_workspace.BreakdownRow": {
+    "properties": {
+      "cost": {
+        "format": "double",
+        "type": "number"
+      },
+      "id": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "key_count": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "member_count": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "name": {
+        "type": "string"
+      },
+      "request_count": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "token_label": {
+        "type": "string"
+      },
+      "token_used": {
+        "format": "int64",
+        "type": "integer"
+      }
+    },
+    "required": [
+      "cost",
+      "name",
+      "token_label",
+      "token_used"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_workspace.CostSummary": {
+    "properties": {
+      "budget": {
+        "format": "double",
+        "type": "number"
+      },
+      "current": {
+        "format": "double",
+        "type": "number"
+      },
+      "percent": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "weekly_budget": {
+        "format": "double",
+        "type": "number"
+      },
+      "weekly_current": {
+        "format": "double",
+        "type": "number"
+      }
+    },
+    "required": [
+      "budget",
+      "current",
+      "percent",
+      "weekly_budget",
+      "weekly_current"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_workspace.CreateRequest": {
+    "properties": {
+      "description": {
+        "maxLength": 1000,
+        "type": "string"
+      },
+      "name": {
+        "maxLength": 255,
+        "minLength": 1,
+        "pattern": ".*\\S.*",
+        "type": "string"
+      },
+      "region": {
+        "maxLength": 64,
+        "type": "string"
+      },
+      "slug": {
+        "maxLength": 255,
+        "type": "string"
+      },
+      "type": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "name"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_workspace.DTO": {
+    "properties": {
+      "created_at": {
+        "format": "date-time",
+        "type": "string"
+      },
+      "description": {
+        "type": "string"
+      },
+      "id": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "name": {
+        "type": "string"
+      },
+      "region": {
+        "type": "string"
+      },
+      "role": {
+        "type": "string"
+      },
+      "slug": {
+        "type": "string"
+      },
+      "status": {
+        "type": "string"
+      },
+      "type": {
+        "type": "string"
+      },
+      "updated_at": {
+        "format": "date-time",
+        "type": "string"
+      },
+      "workspace_id": {
+        "format": "int64",
+        "type": "integer"
+      }
+    },
+    "required": [
+      "created_at",
+      "description",
+      "id",
+      "name",
+      "region",
+      "slug",
+      "status",
+      "type",
+      "updated_at",
+      "workspace_id"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_workspace.MetricAnalysis": {
+    "properties": {
+      "by_member": {
+        "items": {
+          "additionalProperties": {},
+          "type": "object"
+        },
+        "type": "array"
+      },
+      "by_provider": {
+        "items": {
+          "additionalProperties": {},
+          "type": "object"
+        },
+        "type": "array"
+      },
+      "by_team": {
+        "items": {
+          "additionalProperties": {},
+          "type": "object"
+        },
+        "type": "array"
+      },
+      "series": {
+        "$ref": "#/definitions/github.com_owlvigil_owlvigil_openapi_internal_modules_workspace.SeriesCatalog"
+      },
+      "total": {
+        "items": {
+          "additionalProperties": {},
+          "type": "object"
+        },
+        "type": "array"
+      }
+    },
+    "required": [
+      "by_member",
+      "by_provider",
+      "by_team",
+      "series",
+      "total"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_workspace.Overview": {
+    "properties": {
+      "breakdown": {
+        "$ref": "#/definitions/github.com_owlvigil_owlvigil_openapi_internal_modules_workspace.Breakdown"
+      },
+      "cost_analysis": {
+        "$ref": "#/definitions/github.com_owlvigil_owlvigil_openapi_internal_modules_workspace.MetricAnalysis"
+      },
+      "range": {
+        "type": "string"
+      },
+      "recent_activity": {
+        "$ref": "#/definitions/github.com_owlvigil_owlvigil_openapi_internal_modules_workspace.OverviewRecentActivity"
+      },
+      "summary": {
+        "$ref": "#/definitions/github.com_owlvigil_owlvigil_openapi_internal_modules_workspace.OverviewSummary"
+      },
+      "usage_analysis": {
+        "$ref": "#/definitions/github.com_owlvigil_owlvigil_openapi_internal_modules_workspace.MetricAnalysis"
+      }
+    },
+    "required": [
+      "breakdown",
+      "cost_analysis",
+      "range",
+      "recent_activity",
+      "summary",
+      "usage_analysis"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_workspace.OverviewAuditLog": {
+    "properties": {
+      "action": {
+        "type": "string"
+      },
+      "after": {
+        "type": "string"
+      },
+      "before": {
+        "type": "string"
+      },
+      "created_at": {
+        "format": "date-time",
+        "type": "string"
+      },
+      "id": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "ip_address": {
+        "type": "string"
+      },
+      "resource_name": {
+        "type": "string"
+      },
+      "resource_type": {
+        "type": "string"
+      },
+      "status": {
+        "type": "string"
+      },
+      "user_name": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "action",
+      "created_at",
+      "id",
+      "resource_name",
+      "resource_type",
+      "status",
+      "user_name"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_workspace.OverviewRecentActivity": {
+    "properties": {
+      "audit_logs": {
+        "items": {
+          "$ref": "#/definitions/github.com_owlvigil_owlvigil_openapi_internal_modules_workspace.OverviewAuditLog"
+        },
+        "type": "array"
+      },
+      "audit_logs_available": {
+        "type": "boolean"
+      },
+      "request_logs": {
+        "items": {
+          "$ref": "#/definitions/github.com_owlvigil_owlvigil_openapi_internal_modules_workspace.OverviewRequestLog"
+        },
+        "type": "array"
+      }
+    },
+    "required": [
+      "audit_logs",
+      "audit_logs_available",
+      "request_logs"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_workspace.OverviewRequestLog": {
+    "properties": {
+      "created_at": {
+        "format": "date-time",
+        "type": "string"
+      },
+      "id": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "input_tokens": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "key_name": {
+        "type": "string"
+      },
+      "latency_ms": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "member": {
+        "type": "string"
+      },
+      "model": {
+        "type": "string"
+      },
+      "output_tokens": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "provider": {
+        "type": "string"
+      },
+      "status": {
+        "type": "string"
+      },
+      "status_code": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "team": {
+        "type": "string"
+      },
+      "total_cost": {
+        "format": "double",
+        "type": "number"
+      },
+      "total_tokens": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "trace_id": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "created_at",
+      "id",
+      "input_tokens",
+      "key_name",
+      "model",
+      "output_tokens",
+      "provider",
+      "status",
+      "status_code",
+      "total_cost",
+      "total_tokens"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_workspace.OverviewSummary": {
+    "properties": {
+      "cost": {
+        "$ref": "#/definitions/github.com_owlvigil_owlvigil_openapi_internal_modules_workspace.CostSummary"
+      },
+      "resources": {
+        "$ref": "#/definitions/github.com_owlvigil_owlvigil_openapi_internal_modules_workspace.ResourceSummary"
+      },
+      "system_status": {
+        "$ref": "#/definitions/github.com_owlvigil_owlvigil_openapi_internal_modules_workspace.SystemStatus"
+      },
+      "token_usage": {
+        "$ref": "#/definitions/github.com_owlvigil_owlvigil_openapi_internal_modules_workspace.TokenSummary"
+      }
+    },
+    "required": [
+      "cost",
+      "resources",
+      "system_status",
+      "token_usage"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_workspace.QuotaCounter": {
+    "properties": {
+      "limit": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "used": {
+        "format": "int64",
+        "type": "integer"
+      }
+    },
+    "required": [
+      "limit",
+      "used"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_workspace.QuotaItem": {
+    "properties": {
+      "key": {
+        "type": "string"
+      },
+      "label": {
+        "type": "string"
+      },
+      "limit": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "unit": {
+        "type": "string"
+      },
+      "used": {
+        "format": "int64",
+        "type": "integer"
+      }
+    },
+    "required": [
+      "key",
+      "label",
+      "limit",
+      "used"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_workspace.QuotaPlan": {
+    "properties": {
+      "name": {
+        "type": "string"
+      },
+      "quotas": {
+        "additionalProperties": {
+          "format": "int64",
+          "type": "integer"
+        },
+        "type": "object"
+      },
+      "slug": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "name",
+      "quotas",
+      "slug"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_workspace.QuotaSummary": {
+    "properties": {
+      "items": {
+        "items": {
+          "$ref": "#/definitions/github.com_owlvigil_owlvigil_openapi_internal_modules_workspace.QuotaItem"
+        },
+        "type": "array"
+      },
+      "plan": {
+        "$ref": "#/definitions/github.com_owlvigil_owlvigil_openapi_internal_modules_workspace.QuotaPlan"
+      },
+      "workspace_id": {
+        "format": "int64",
+        "type": "integer"
+      }
+    },
+    "required": [
+      "items",
+      "plan",
+      "workspace_id"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_workspace.QuotaUsage": {
+    "properties": {
+      "api_keys": {
+        "$ref": "#/definitions/github.com_owlvigil_owlvigil_openapi_internal_modules_workspace.QuotaCounter"
+      },
+      "members": {
+        "$ref": "#/definitions/github.com_owlvigil_owlvigil_openapi_internal_modules_workspace.QuotaCounter"
+      },
+      "teams": {
+        "$ref": "#/definitions/github.com_owlvigil_owlvigil_openapi_internal_modules_workspace.QuotaCounter"
+      }
+    },
+    "required": [
+      "api_keys",
+      "members",
+      "teams"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_workspace.ResourceSummary": {
+    "properties": {
+      "active_keys": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "members": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "providers": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "teams": {
+        "format": "int64",
+        "type": "integer"
+      }
+    },
+    "required": [
+      "active_keys",
+      "members",
+      "providers",
+      "teams"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_workspace.SeriesCatalog": {
+    "properties": {
+      "members": {
+        "items": {
+          "type": "string"
+        },
+        "type": "array"
+      },
+      "providers": {
+        "items": {
+          "type": "string"
+        },
+        "type": "array"
+      },
+      "teams": {
+        "items": {
+          "type": "string"
+        },
+        "type": "array"
+      }
+    },
+    "required": [
+      "members",
+      "providers",
+      "teams"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_workspace.SystemStatus": {
+    "properties": {
+      "avg_latency_ms": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "health_pct": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "success_rate": {
+        "format": "double",
+        "type": "number"
+      },
+      "tone": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "avg_latency_ms",
+      "health_pct",
+      "success_rate",
+      "tone"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_workspace.TokenSummary": {
+    "properties": {
+      "current": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "label": {
+        "type": "string"
+      },
+      "weekly_current": {
+        "format": "int64",
+        "type": "integer"
+      },
+      "weekly_label": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "current",
+      "label",
+      "weekly_current",
+      "weekly_label"
+    ],
+    "type": "object"
+  },
+  "github.com_owlvigil_owlvigil_openapi_internal_modules_workspace.UpdateRequest": {
+    "properties": {
+      "description": {
+        "maxLength": 1000,
+        "type": "string"
+      },
+      "name": {
+        "maxLength": 255,
+        "type": "string"
+      }
+    },
+    "type": "object"
+  }
+}

@@ -1,5 +1,5 @@
 [build-system]
-requires = ["hatchling>=1.27,<2"]
+requires = ["hatchling>=1.27,<1.32"]
 build-backend = "hatchling.build"
 
 [project]
@@ -35,6 +35,7 @@ Documentation = "https://github.com/Syrovex/owlvigil_sdk_python#readme"
 
 [project.optional-dependencies]
 test = ["pytest>=8,<9", "pytest-asyncio>=0.24,<1"]
+release = ["build>=1.2,<2", "twine>=5,<7"]
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/owlvigil"]
@@ -43,3 +44,10 @@ packages = ["src/owlvigil"]
 testpaths = ["tests"]
 addopts = "-q"
 asyncio_mode = "auto"
+pythonpath = ["src"]
+
+[tool.ruff]
+target-version = "py39"
+
+[tool.hatch.build.targets.sdist]
+include = ["src", "tests", "contracts", "scripts", "*.md", "LICENSE", "pyproject.toml"]

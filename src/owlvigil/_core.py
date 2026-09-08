@@ -40,6 +40,16 @@ class RequestOptions:
 
 
 @dataclass(frozen=True)
+class ManagementOperationRequest:
+    """Request parts for a generated Management OpenAPI operation."""
+
+    path: Mapping[str, Any] = field(default_factory=dict)
+    query: Mapping[str, Any] = field(default_factory=dict)
+    body: Any = None
+    options: Optional[RequestOptions] = None
+
+
+@dataclass(frozen=True)
 class SseEvent:
     event: str
     data: str
@@ -63,6 +73,20 @@ class OwlVigilApiError(OwlVigilError):
         if message:
             details.append(f"message={message}")
         super().__init__("owlvigil: " + " ".join(details))
+
+
+class OwlVigilOAuthError(OwlVigilError):
+    def __init__(self, status_code: int, error_code: str, description: str, uri: str = "") -> None:
+        self.status_code = status_code
+        self.error_code = error_code
+        self.description = description
+        self.uri = uri
+        details = [f"status={status_code}"]
+        if error_code:
+            details.append(f"error={error_code}")
+        if description:
+            details.append(f"description={description}")
+        super().__init__("owlvigil oauth2: " + " ".join(details))
 
 
 class SyncTransport:

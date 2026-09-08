@@ -35,19 +35,35 @@ pass the returned workspace ID to workspace-scoped methods. `RequestOptions`
 controls timeout, retry limits, idempotency keys, and safe custom headers.
 Retries apply only to idempotent calls or calls with an idempotency key.
 
+Use `environment="staging"` or `environment="local"` for the same endpoint
+routing convention as the Go SDK. `OWLVIGIL_ENV` is used when the option is
+omitted. Explicit base URLs remain available for reverse proxies and test
+servers.
+
 ## Supported preview surface
 
 - Gateway models, Chat Completions, Responses, Embeddings, and Anthropic Messages
 - Sync and async SSE streaming for Chat Completions and Responses
 - Workspace listing, usage summary, and request-log lookup
+- The complete generated 144-operation Management OpenAPI catalog, available
+  through `open_api()` and generated snake_case methods
+- OAuth 2.0 authorization-code, refresh-token, client-credentials, revocation,
+  and user-info flows
 - Webhook HMAC signing and verification
 
 ## Development
 
 ```bash
-python -m pip install -e '.[test]'
+python -m pip install -e '.[test,release]'
 pytest
 python -m build
+python -m twine check dist/*
+```
+
+Regenerate the checked-in Management catalog and Python types with:
+
+```bash
+python scripts/generate_all.py
 ```
 
 Live tests are opt-in and read-only.

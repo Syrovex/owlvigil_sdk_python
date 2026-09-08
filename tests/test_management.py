@@ -1,7 +1,9 @@
 import httpx
 import pytest
 
-from owlvigil import AsyncOwlVigil, OwlVigil
+from owlvigil import AsyncOwlVigil, MANAGEMENT_OPERATIONS, ManagementOperationRequest, OwlVigil
+from owlvigil.management_methods import AsyncGeneratedManagementMethods, GeneratedManagementMethods
+from owlvigil.management_types import __all__ as MANAGEMENT_TYPES
 
 
 def _client(handler):
@@ -90,6 +92,36 @@ def test_get_request_log_url_encodes_request_id_and_sets_workspace_id():
         client.management.get_request_log(5, "req/with-slash")
 
 
+def test_open_api_catalog_and_generated_method_send_typed_request_parts():
+    calls = []
+
+    def handler(request: httpx.Request) -> httpx.Response:
+        calls.append(request)
+        return httpx.Response(200, json={"data": {"id": 7}})
+
+    assert len(MANAGEMENT_OPERATIONS) == 144
+    with _client(handler) as client:
+        response = client.management.get_gateway_providers_provider_id(
+            ManagementOperationRequest(path={"provider_id": 7}, query={"include_keys": True})
+        )
+        assert response.data == {"id": 7}
+    assert calls[0].url.path == "/v1/gateway/providers/7"
+    assert calls[0].url.params["include_keys"] == "true"
+    assert len([name for name in dir(GeneratedManagementMethods) if not name.startswith("_")]) == 144
+    assert len([name for name in dir(AsyncGeneratedManagementMethods) if not name.startswith("_")]) == 144
+    assert len(MANAGEMENT_TYPES) == 168
+
+
+def test_iter_workspaces_follows_cursor_pages():
+    def handler(request: httpx.Request) -> httpx.Response:
+        if request.url.params.get("cursor") == "page-2":
+            return httpx.Response(200, json={"items": [{"id": 2}], "page_info": {"has_more": False}})
+        return httpx.Response(200, json={"items": [{"id": 1}], "page_info": {"has_more": True, "next_cursor": "page-2"}})
+
+    with _client(handler) as client:
+        assert [item["id"] for item in client.management.iter_workspaces(page_size=1)] == [1, 2]
+
+
 def test_management_unwraps_data_envelope_and_falls_back_to_body_request_id():
     def handler(request: httpx.Request) -> httpx.Response:
         return httpx.Response(200, json={"data": {"items": ["ws"]}, "request_id": "req_from_body"})
@@ -132,6 +164,21 @@ async def test_async_management_unwraps_envelope():
     async with _async_client(handler) as client:
         response = await client.management.get_usage_summary(1)
         assert response.data == {"requests": 9}
+
+
+@pytest.mark.asyncio
+async def test_async_open_api_generated_method_and_pagination():
+    async def handler(request: httpx.Request) -> httpx.Response:
+        if request.url.path.endswith("/providers/7"):
+            return httpx.Response(200, json={"data": {"id": 7}})
+        cursor = request.url.params.get("cursor")
+        return httpx.Response(200, json={"items": [{"id": 2 if cursor else 1}], "page_info": {"has_more": not bool(cursor), "next_cursor": "page-2" if not cursor else ""}})
+
+    async with _async_client(handler) as client:
+        provider = await client.management.get_gateway_providers_provider_id(ManagementOperationRequest(path={"provider_id": 7}))
+        assert provider.data == {"id": 7}
+        workspaces = [item async for item in client.management.iter_workspaces(page_size=1)]
+        assert [item["id"] for item in workspaces] == [1, 2]
 
 
 @pytest.mark.asyncio
