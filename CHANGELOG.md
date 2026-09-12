@@ -6,6 +6,8 @@ minor releases may include announced breaking changes.
 
 ## [Unreleased]
 
+## [0.2.0] - 2026-09-12
+
 ### Added
 
 - A generated, checked-in Management OpenAPI catalog with 144 operations and
