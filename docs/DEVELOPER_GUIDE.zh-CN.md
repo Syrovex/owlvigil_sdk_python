@@ -336,3 +336,121 @@ Live 测试默认关闭，只有设置 `OWLVIGIL_LIVE_TEST=1` 并配置真实凭
 HTTP 资源、scope、状态码与公共 envelope 以
 [OwlVigil Developer Center](https://github.com/Syrovex/owlvigil_openapi/blob/main/docs/owlvigil-developer-center.md)
 和 OpenAPI 规范为准。
+
+## 10. 核心概念与环境选择
+
+顶层客户端按职责拆分为三个独立面：
+
+```text
+OwlVigil / AsyncOwlVigil
+├── gateway      模型调用与流式响应
+├── management   工作区与生成的 Management 操作
+└── oauth2       OAuth 2.0 接口
+```
+
+`gateway_key` 与 `api_key` 刻意分离。把有效 Key 发到错误的域名或 API 面，通常会得到
+`401` 或 `403`；不要靠互换 Key 来“修复”权限错误。
+
+`environment` 参数和 `OWLVIGIL_ENV` 支持 `production`、`staging`、`local`：
+
+| 环境 | Gateway | Management | OAuth base |
+| --- | --- | --- | --- |
+| `production` | `https://gateway.owlvigil.com` | `https://api.owlvigil.com/v1` | `https://open.owlvigil.com` |
+| `staging` | `https://staginggateway.owlvigil.com` | `https://stagingapi.owlvigil.com/v1` | `https://stagingapi.owlvigil.com` |
+| `local` | `http://localhost:8080` | `http://localhost:8081/v1` | `http://localhost:8081` |
+
+```python
+import os
+from owlvigil import OwlVigil
+
+os.environ["OWLVIGIL_ENV"] = "staging"
+with OwlVigil(gateway_key=os.environ["OWLVIGIL_GATEWAY_KEY"]) as client:
+    print(client.gateway.list_models().meta.status_code)
+```
+
+反向代理或测试服务器应显式传入 `gateway_base_url`、`management_base_url` 和
+`oauth_base_url`。显式传入的非 OwlVigil 地址不会被 SDK 偷换成本地端口。
+
+## 11. Management 领域地图与安全工作流
+
+当前生成的 Management 面来自已提交的契约，共 144 个操作。优先使用生成的
+snake_case 方法；需要调用尚未提供手写便捷包装的方法时，再使用 `open_api()`。
+
+| 领域 | 代表操作 | 安全边界 |
+| --- | --- | --- |
+| 工作区 | `get_workspaces`、`post_workspaces`、activity、overview | 工作区 ID 是授权边界；写入或删除前先确认访问权限 |
+| 团队、成员、邀请、RBAC | `get_workspaces_workspace_id_teams` 及成员/角色/权限操作 | 替换权限覆盖前先读取当前角色和权限 |
+| Gateway Key | `get_gateway_keys`、`post_gateway_keys`、轮换/启用/禁用/删除 | 返回的 Secret 视为一次性值，立即放入密钥管理服务 |
+| 模型、Provider、路由、策略 | `get_gateway_models`、Provider、Route、Policy preview/update | 先预览并验证，再改变线上流量 |
+| 用量、配额、日志、Trace | `get_gateway_usage`、request logs、payload logs、traces | Payload 可能含敏感内容，只在获批的故障处理中读取 |
+| 财务治理 | 预算、限额、阈值、支出摘要 | 先检查；支付和预算写操作在超时不明确时不可自动重放 |
+| Billing | 计划、订阅、充值、发票、订单、支付方式、自动扣费 | checkout、支付、自动扣费和 retry 都是外部财务副作用 |
+| Webhook | Endpoint 生命周期、事件历史、测试/重试/重投 | 按事件 ID 去重；重投操作会产生新的投递 |
+| 账户 | 个人资料、通知、密码、支持请求、邀请 | 不要把个人数据和邀请链接写入日志或客户端埋点 |
+
+生成操作使用统一的请求封装：
+
+```python
+from owlvigil import ManagementOperationRequest, OwlVigil
+
+with OwlVigil(api_key="management-key") as client:
+    page = client.management.open_api(
+        "get_workspaces_workspace_id_members",
+        ManagementOperationRequest(
+            path={"workspace_id": 123},
+            query={"limit": 50},
+        ),
+    )
+    print(page.data, page.meta.request_id)
+```
+
+路径参数会进行 URL 编码，值为 `None` 的查询参数会被省略。Cursor 是不透明值，
+必须原样传回；不要自行发明 operation ID 或查询参数，应以
+`MANAGEMENT_OPERATIONS` 和生成的类型为准。
+
+写操作建议遵循：读取当前资源；服务提供 preview 时先预览；执行一次写入；保留
+request ID；重新读取确认结果。除非契约明确支持幂等键，不要在超时后自动重试邀请、
+权限更新、Key 轮换、Billing、Provider 修改或 Webhook 重投。
+
+## 12. OAuth 2.0
+
+`client.oauth2` 和 `async_client.oauth2` 支持授权 URL、authorization-code 换 token、
+refresh、client credentials、撤销和 user-info：
+
+```python
+from owlvigil import OwlVigil
+
+with OwlVigil() as client:
+    url = client.oauth2.authorization_url(
+        client_id="your-client-id",
+        redirect_uri="https://app.example.com/oauth/callback",
+        scopes=["openid", "profile"],
+        state="csrf-state",
+    )
+    print(url)
+```
+
+`state`、client secret、access token、refresh token 和 authorization code 必须放在受保护
+的服务端存储中。OAuth 地址会跟随所选环境，也可以显式覆盖。
+
+## 13. 示例、验证与支持证据
+
+根据改动范围执行最小但真实的验证：
+
+```bash
+python -m pip install -e '.[test,release]'
+python -m pytest
+python -m build
+python -m twine check dist/*
+```
+
+修改文档或契约后，还应重新生成并检查已提交的目录：
+
+```bash
+python scripts/generate_all.py
+git diff --check
+```
+
+重要请求至少保留 SDK 版本、HTTP 方法/路径、UTC 时间、状态码和
+`response.meta.request_id`。必须脱敏 Authorization、API Key、Provider 凭证、Webhook
+Secret、支付信息以及包含个人或财务数据的请求/响应正文。

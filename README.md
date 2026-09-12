@@ -9,8 +9,7 @@ Management API, streaming, and webhook verification.
 pip install owlvigil
 ```
 
-Until the package is published on PyPI, install a trusted source checkout
-with `pip install .`.
+For a source checkout or unreleased change, install with `pip install .`.
 
 ## Quick start
 
@@ -70,7 +69,7 @@ Live tests are opt-in and read-only.
 
 ## Documentation
 
-- Developer guides: [English](docs/DEVELOPER_GUIDE.en-US.md) · [简体中文](docs/DEVELOPER_GUIDE.zh-CN.md)
+- Developer guides: [English](https://github.com/Syrovex/owlvigil_sdk_python/blob/main/docs/DEVELOPER_GUIDE.en-US.md) · [简体中文](https://github.com/Syrovex/owlvigil_sdk_python/blob/main/docs/DEVELOPER_GUIDE.zh-CN.md)
 - [CONTRIBUTING.md](CONTRIBUTING.md), [SECURITY.md](SECURITY.md),
   [SUPPORT.md](SUPPORT.md), and [CHANGELOG.md](CHANGELOG.md)
 

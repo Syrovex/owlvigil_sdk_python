@@ -359,3 +359,133 @@ set alongside real credentials.
 For HTTP resources, scopes, status codes, and the public response envelope,
 see the [OwlVigil Developer Center](https://github.com/Syrovex/owlvigil_openapi/blob/main/docs/owlvigil-developer-center.md)
 and the OpenAPI specification.
+
+## 10. Core concepts and environment selection
+
+The SDK has one top-level client with independent transports:
+
+```text
+OwlVigil / AsyncOwlVigil
+├── gateway      model invocation and streaming
+├── management   workspace and generated Management operations
+└── oauth2      OAuth 2.0 endpoints
+```
+
+`gateway_key` and `api_key` are intentionally separate. A valid key sent to
+the wrong host or API surface usually produces `401` or `403`; do not solve
+that error by swapping credentials blindly.
+
+The `environment` argument and `OWLVIGIL_ENV` support `production`, `staging`,
+and `local`:
+
+| Environment | Gateway | Management | OAuth base |
+| --- | --- | --- | --- |
+| `production` | `https://gateway.owlvigil.com` | `https://api.owlvigil.com/v1` | `https://open.owlvigil.com` |
+| `staging` | `https://staginggateway.owlvigil.com` | `https://stagingapi.owlvigil.com/v1` | `https://stagingapi.owlvigil.com` |
+| `local` | `http://localhost:8080` | `http://localhost:8081/v1` | `http://localhost:8081` |
+
+```python
+import os
+from owlvigil import OwlVigil
+
+os.environ["OWLVIGIL_ENV"] = "staging"
+with OwlVigil(gateway_key=os.environ["OWLVIGIL_GATEWAY_KEY"]) as client:
+    print(client.gateway.list_models().meta.status_code)
+```
+
+For a reverse proxy or test server, use explicit `gateway_base_url`,
+`management_base_url`, and `oauth_base_url`. An explicit non-OwlVigil URL is
+not silently redirected to local ports.
+
+## 11. Management domain map and safe workflows
+
+The generated Management surface contains 144 operations from the checked-in
+contract. Use the generated snake_case methods when a method is available;
+use `open_api()` when you need an operation that is not wrapped by a hand-written
+convenience method.
+
+| Domain | Representative operations | Safety boundary |
+| --- | --- | --- |
+| Workspaces | `get_workspaces`, `post_workspaces`, workspace activity and overview | Workspace ID is an authorization boundary; verify access before writes or deletes |
+| Teams, members, invitations, RBAC | `get_workspaces_workspace_id_teams`, member/role/permission operations | Read current roles and permissions before replacing an override |
+| Gateway keys | `get_gateway_keys`, `post_gateway_keys`, rotate/enable/disable/delete | Treat returned secrets as one-time values; store them immediately in a secret manager |
+| Models, providers, routes, policies | `get_gateway_models`, providers, routes, policy preview/update | Preview and verify routing changes before changing live traffic |
+| Usage, quota, logs, traces | `get_gateway_usage`, request logs, payload logs, traces | Payload access can expose sensitive content; use only for an approved incident |
+| Financial governance | workspace governance, budgets, limits, thresholds, spend summary | Inspect first; payment and budget mutations are not safe to replay after an ambiguous timeout |
+| Billing | plans, subscriptions, top-ups, invoices, orders, payment methods, auto-charge | Treat checkout, payment, auto-charge, and retry calls as external financial effects |
+| Webhooks | endpoint lifecycle, event history, test/retry/redelivery | Deduplicate event IDs; replay methods intentionally create new deliveries |
+| Account | profile, notification preferences, password, support, invitations | Keep personal data and invite links out of logs and client-side telemetry |
+
+Generated operation calls use a typed request envelope:
+
+```python
+from owlvigil import ManagementOperationRequest, OwlVigil
+
+with OwlVigil(api_key="management-key") as client:
+    page = client.management.open_api(
+        "get_workspaces_workspace_id_members",
+        ManagementOperationRequest(
+            path={"workspace_id": 123},
+            query={"limit": 50},
+        ),
+    )
+    print(page.data, page.meta.request_id)
+```
+
+Path values are URL-encoded and `None` query values are omitted. Keep cursor
+values opaque and pass them back unchanged. Do not invent operation IDs or
+query parameters; inspect `MANAGEMENT_OPERATIONS` and the generated types.
+
+For write workflows, use this sequence: inspect the current resource, preview
+when the API offers a preview operation, perform one write, retain the request
+ID, then re-read the resource. Do not automatically retry invitations,
+permission updates, key rotation, billing, provider changes, or webhook
+redelivery after a timeout unless the contract explicitly supports an
+idempotency key.
+
+## 12. OAuth 2.0
+
+OAuth helpers are available as `client.oauth2` and `async_client.oauth2`. They
+cover authorization URL construction, authorization-code exchange, refresh,
+client credentials, token revocation, and user-info:
+
+```python
+from owlvigil import OwlVigil
+
+with OwlVigil() as client:
+    url = client.oauth2.authorization_url(
+        client_id="your-client-id",
+        redirect_uri="https://app.example.com/oauth/callback",
+        scopes=["openid", "profile"],
+        state="csrf-state",
+    )
+    print(url)
+```
+
+Keep `state`, client secrets, access tokens, refresh tokens, and authorization
+codes in protected server-side storage. The OAuth base URL follows the selected
+environment unless explicitly overridden.
+
+## 13. Examples, validation, and support evidence
+
+Use the smallest proof that matches the change:
+
+```bash
+python -m pip install -e '.[test,release]'
+python -m pytest
+python -m build
+python -m twine check dist/*
+```
+
+For a documentation or contract change, also regenerate and inspect the
+checked-in catalog:
+
+```bash
+python scripts/generate_all.py
+git diff --check
+```
+
+For every important request, retain the SDK version, HTTP method/path, UTC
+timestamp, status, and `response.meta.request_id`. Redact Authorization
+headers, API keys, provider credentials, webhook secrets, payment details,
+and request/response bodies that contain personal or financial data.
