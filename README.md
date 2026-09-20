@@ -69,7 +69,7 @@ Live tests are opt-in and read-only.
 
 ## Documentation
 
-- Developer guides: [English](https://github.com/Syrovex/owlvigil_sdk_python/blob/main/docs/DEVELOPER_GUIDE.en-US.md) · [简体中文](https://github.com/Syrovex/owlvigil_sdk_python/blob/main/docs/DEVELOPER_GUIDE.zh-CN.md)
+- Developer guide: [here](https://github.com/Syrovex/owlvigil_sdk_python/blob/main/docs/DEVELOPER_GUIDE.en-US.md)
 - [CONTRIBUTING.md](CONTRIBUTING.md), [SECURITY.md](SECURITY.md),
   [SUPPORT.md](SUPPORT.md), and [CHANGELOG.md](CHANGELOG.md)
 

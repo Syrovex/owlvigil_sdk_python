@@ -6,12 +6,10 @@ names and request fields.
 
 ## Recommended path
 
-1. [Developer Guide (English)](DEVELOPER_GUIDE.en-US.md): install the package,
+1. [Developer Guide](DEVELOPER_GUIDE.en-US.md): install the package,
    choose the correct credential, call Gateway and Management, and handle
    streaming, OAuth 2.0, webhooks, retries, and errors.
-2. [开发者文档（简体中文）](DEVELOPER_GUIDE.zh-CN.md): the same workflow in
-   Chinese.
-3. [Releasing](RELEASING.md): build, validate, and publish the package.
+2. [Releasing](RELEASING.md): build, validate, and publish the package.
 
 ## Public package surface
 
